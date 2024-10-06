@@ -1,5 +1,7 @@
 public struct yaHTMLDocument: Sendable {
 	public struct Context: Sendable {
+		public static let `default` = Context(mode: .minify, userInfo: [:])
+		public static let `defaultPretty` = Context(mode: .tabIndentation, userInfo: [:])
 		public enum Mode: Sendable {
 			case minify
 			case pretty(indentation: String)
@@ -7,9 +9,9 @@ public struct yaHTMLDocument: Sendable {
 			public static let fourSpaceIndentation = Self.pretty(indentation: "    ")
 			public static let tabIndentation = Self.pretty(indentation: "\t")
 		}
-		let mode: Mode
-		var depth: Int = 0
-		var userInfo: [String: any Sendable]
+		public let mode: Mode
+		public var depth: Int = 0
+		public var userInfo: [String: any Sendable]
 	}
 
 	public let html: HTML
@@ -28,13 +30,11 @@ public struct yaHTMLDocument: Sendable {
 	}
 }
 
-public struct HTML: HTMLNode {
+public struct HTML: HTMLContainerNode {
 	public var childNodes: [any HTMLNode]
 	public var tag: String? { "html" }
 
-	public func render(withContext context: Context) throws -> String {
-		try childNodes.reduce(into: "") {
-			try $0.append($1.render(withContext: context))
-		}
+	public init(childNodes: [any HTMLNode] = []) {
+		self.childNodes = childNodes
 	}
 }

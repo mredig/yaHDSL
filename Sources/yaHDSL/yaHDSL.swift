@@ -43,9 +43,9 @@ extension HTMLContainerNode {
 			}
 			if let tag {
 				return """
-					\(indentation)<\(tag)>
+					<\(tag)>
 					\(indentedContent.joined(separator: "\n"))
-					\(indentation)</\(tag)>
+					</\(tag)>
 					"""
 			} else {
 				return "\(indentedContent.joined(separator: "\n"))\n"

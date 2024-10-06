@@ -1,6 +1,17 @@
 import Testing
-@testable import yaHDSL
+import yaHDSL
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+@Test func basicHTMLMinPage() async throws {
+	let html = HTML(childNodes: [])
+	let doc = yaHTMLDocument(html: html, context: .default)
+
+	print(try doc.render())
 }
+
+@Test func basicHTMLPrettyPage() async throws {
+	let html = HTML(childNodes: [])
+	let doc = yaHTMLDocument(html: html, context: .defaultPretty)
+
+	print(try doc.render())
+}
+
