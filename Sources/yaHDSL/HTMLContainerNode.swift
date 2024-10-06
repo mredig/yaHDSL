@@ -1,11 +1,19 @@
 public protocol HTMLContainerNode: HTMLNode {
 	var childNodes: [any HTMLNode] { get set }
 
+	init(childNodes: [any HTMLNode])
+
+	init(@HTMLContainerNodeBuilder _ builder: () -> Self)
 	mutating func addChildNode(_ child: any HTMLNode)
 }
 
 extension HTMLContainerNode {
 	public var tag: String? { String(describing: Self.self).lowercased() }
+
+	public init(@HTMLContainerNodeBuilder _ builder: () -> Self) {
+		self = builder()
+	}
+
 	public mutating func addChildNode(_ child: any HTMLNode) {
 		childNodes.append(child)
 	}
