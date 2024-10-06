@@ -29,12 +29,3 @@ public struct yaHTMLDocument: Sendable {
 		"""
 	}
 }
-
-public struct HTML: HTMLContainerNode {
-	public var childNodes: [any HTMLNode]
-	public var tag: String? { "html" }
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
