@@ -12,6 +12,13 @@ public struct yaHTMLDocument: Sendable {
 		public let mode: Mode
 		public var depth: Int = 0
 		public var userInfo: [String: any Sendable]
+		package var nextSibling: (any HTMLNode)?
+
+		public init(mode: Mode, depth: Int = 0, userInfo: [String: any Sendable]) {
+			self.mode = mode
+			self.depth = depth
+			self.userInfo = userInfo
+		}
 	}
 
 	public let html: HTML

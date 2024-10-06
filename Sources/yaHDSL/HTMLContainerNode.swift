@@ -14,6 +14,7 @@ extension HTMLContainerNode {
 		let childContext = {
 			var copy = context
 			copy.depth += 1
+			copy.nextSibling = nil
 			return copy
 		}()
 
@@ -23,7 +24,7 @@ extension HTMLContainerNode {
 				var childContext = childContext
 				let nextIndex = childNodes.index(after: index)
 				if childNodes.indices.contains(nextIndex) {
-					childContext.userInfo["nextNode"] = childNodes[nextIndex]
+					childContext.nextSibling = childNodes[nextIndex]
 				}
 				let render = try childNode.render(withContext: childContext)
 				guard render.isEmpty == false else { continue }
@@ -41,13 +42,22 @@ extension HTMLContainerNode {
 		case .pretty(indentation: let baseIndentation):
 			if let tag {
 				let indentation = String(String(repeating: baseIndentation, count: context.depth))
-				return """
-					\(indentation)<\(tag)>
-					\(content.joined(separator: "\n"))
-					\(indentation)</\(tag)>
-					"""
+				
+				let output: String = {
+					var builder: [String] = []
+					builder.append("\(indentation)<\(tag)>")
+					if content.isEmpty == false {
+						builder.append("\(content.joined())")
+					}
+					builder.append("\(indentation)</\(tag)>")
+					return builder.joined(separator: "\n")
+				}()
+				guard context.nextSibling == nil else {
+					return output + "\n"
+				}
+				return output
 			} else {
-				return "\(content.joined(separator: "\n"))\n"
+				return "\(content.joined())\n"
 			}
 		}
 	}
