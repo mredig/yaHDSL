@@ -54,4 +54,6 @@ public extension AttributeName {
 	static let popovertarget = AttributeName(rawValue: "popovertarget")!
 	static let popovertargetaction = AttributeName(rawValue: "popovertargetaction")!
 	static let value = AttributeName(rawValue: "value")!
+	static let height = AttributeName(rawValue: "height")!
+	static let width = AttributeName(rawValue: "width")!
 }

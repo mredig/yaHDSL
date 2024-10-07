@@ -175,6 +175,20 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func canvas() async throws {
+		let tag = Canvas {
+			Button {
+				"Clear it"
+			}
+		}
+			.withWidth(100)
+			.withHeight(50)
+
+		let expected = "<canvas height=\"50\" width=\"100\"><button>Clear it</button></canvas>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 
