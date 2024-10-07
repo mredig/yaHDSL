@@ -24,21 +24,11 @@ public enum AttributeValue: Sendable {
 		}
 	}
 
-	#if canImport(Foundation)
-	private static let attributeValueAllowedCharacters: CharacterSet = {
-		var start = CharacterSet.alphanumerics
-		start.formUnion(.punctuationCharacters)
-		start.formUnion(.symbols)
-		start.formUnion(.whitespaces)
-		start.remove(charactersIn: "\"'<>&")
-		return start
-	}()
-	#endif
 	private static func sanitizeValueString(_ string: String) -> String {
 		#if canImport(Foundation)
 		string.reduce(into: "") { outString, character in
 			guard
-				character.unicodeScalars.allSatisfy({ Self.attributeValueAllowedCharacters.contains($0) })
+				character.unicodeScalars.allSatisfy({ CharacterMapper.attributeValueAllowedCharacters.contains($0) })
 			else {
 				outString += CharacterMapper.preferName(for: character)
 				return

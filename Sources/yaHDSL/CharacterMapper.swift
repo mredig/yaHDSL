@@ -47,4 +47,38 @@ public enum CharacterMapper {
 			.joined()
 	}
 }
+
+public extension CharacterMapper {
+	static let attributeValueAllowedCharacters: CharacterSet = {
+		var start = CharacterSet.alphanumerics
+		start.formUnion(.punctuationCharacters)
+		start.formUnion(.symbols)
+		start.formUnion(.whitespaces)
+		start.remove(charactersIn: "\"'<>&")
+		return start
+	}()
+
+	static let attributeNameAllowedCharacters: CharacterSet = {
+		var set = CharacterSet.alphanumerics
+		set.formUnion(.punctuationCharacters)
+		set.subtract(.whitespacesAndNewlines)
+		set.subtract(.controlCharacters)
+		set.subtract(.illegalCharacters)
+		let null = UnicodeScalar(0)!
+		let quoteMark = UnicodeScalar(0x22)!
+		let aposrophe = UnicodeScalar(0x27)!
+		let greaterThanSign = UnicodeScalar(0x3e)!
+		let solidus = UnicodeScalar(0x2f)!
+		let equalsSign = UnicodeScalar(0x3d)!
+
+		set.remove(null)
+		set.remove(quoteMark)
+		set.remove(aposrophe)
+		set.remove(greaterThanSign)
+		set.remove(solidus)
+		set.remove(equalsSign)
+
+		return set
+	}()
+}
 #endif
