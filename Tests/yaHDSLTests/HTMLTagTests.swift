@@ -162,6 +162,19 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func button() async throws {
+		let tag = Button {
+			"Press Me"
+		}
+			.withForm("theForm")
+			.withName("buttoo")
+			.withFormMethod(.post)
+
+		let expected = "<button form=\"theForm\" formmethod=\"post\" name=\"buttoo\">Press Me</button>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 

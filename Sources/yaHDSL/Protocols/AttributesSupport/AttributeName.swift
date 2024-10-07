@@ -22,19 +22,18 @@ public struct AttributeName: RawRepresentable, Sendable, Hashable {
 }
 
 public extension AttributeName {
-	static let href = try! AttributeName("href")
-	static let download = try! AttributeName("download")
-	static let hreflang = try! AttributeName("hreflang")
-	static let ping = try! AttributeName("ping")
-	static let referrerpolicy = try! AttributeName("referrerpolicy")
-	static let rel = try! AttributeName("rel")
-	static let target = try! AttributeName("target")
-	static let type = try! AttributeName("type")
-	static let alt = try! AttributeName("alt")
-	static let coords = try! AttributeName("coords")
-	static let media = try! AttributeName("media")
-	static let shape = try! AttributeName("shape")
-
+	static let href = AttributeName(rawValue: "href")!
+	static let download = AttributeName(rawValue: "download")!
+	static let hreflang = AttributeName(rawValue: "hreflang")!
+	static let ping = AttributeName(rawValue: "ping")!
+	static let referrerpolicy = AttributeName(rawValue: "referrerpolicy")!
+	static let rel = AttributeName(rawValue: "rel")!
+	static let target = AttributeName(rawValue: "target")!
+	static let type = AttributeName(rawValue: "type")!
+	static let alt = AttributeName(rawValue: "alt")!
+	static let coords = AttributeName(rawValue: "coords")!
+	static let media = AttributeName(rawValue: "media")!
+	static let shape = AttributeName(rawValue: "shape")!
 	static let autoplay = AttributeName(rawValue: "autoplay")!
 	static let controls = AttributeName(rawValue: "controls")!
 	static let loop = AttributeName(rawValue: "loop")!
@@ -42,7 +41,17 @@ public extension AttributeName {
 	static let preload = AttributeName(rawValue: "preload")!
 	static let src = AttributeName(rawValue: "src")!
 	static let cite = AttributeName(rawValue: "cite")!
-
 	static let sizes = AttributeName(rawValue: "sizes")!
 	static let srcset = AttributeName(rawValue: "srcset")!
+	static let disabled = AttributeName(rawValue: "disabled")!
+	static let form = AttributeName(rawValue: "form")!
+	static let formaction = AttributeName(rawValue: "formaction")!
+	static let formenctype = AttributeName(rawValue: "formenctype")!
+	static let formmethod = AttributeName(rawValue: "formmethod")!
+	static let formnovalidate = AttributeName(rawValue: "formnovalidate")!
+	static let formtarget = AttributeName(rawValue: "formtarget")!
+	static let name = AttributeName(rawValue: "name")!
+	static let popovertarget = AttributeName(rawValue: "popovertarget")!
+	static let popovertargetaction = AttributeName(rawValue: "popovertargetaction")!
+	static let value = AttributeName(rawValue: "value")!
 }
