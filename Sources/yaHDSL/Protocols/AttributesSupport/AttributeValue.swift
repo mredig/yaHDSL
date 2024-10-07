@@ -7,6 +7,7 @@ public enum AttributeValue: Sendable {
 	case list([String])
 	case int(Int)
 	case float(Double)
+	case bool(Bool)
 	case flag
 
 	func renderAttribute(named name: String) -> String {
@@ -19,6 +20,8 @@ public enum AttributeValue: Sendable {
 			"\(name)=\"\(int)\""
 		case .float(let double):
 			"\(name)=\"\(double)\""
+		case .bool(let bool):
+			"\(name)=\"\(bool)\""
 		case .flag:
 			"\(name)"
 		}
