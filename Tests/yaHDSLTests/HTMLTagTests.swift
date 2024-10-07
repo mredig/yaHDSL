@@ -126,6 +126,29 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func bdi() async throws {
+		let tag = Span {
+			"User: "
+			Bdi { "foo" }
+			"Password: "
+			Bdi { "bar" }
+		}
+
+		let expected = "<span>User: <bdi>foo</bdi>Password: <bdi>bar</bdi></span>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func bdo() async throws {
+		let tag = Bdo(dir: .ltr) {
+			"blue blar"
+		}
+
+		let expected = "<bdo dir=\"ltr\">blue blar</bdo>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 
