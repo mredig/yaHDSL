@@ -60,4 +60,5 @@ public extension AttributeName {
 	static let label = AttributeName(rawValue: "label")!
 	static let selected = AttributeName(rawValue: "selected")!
 	static let datetime = AttributeName(rawValue: "datetime")!
+	static let open = AttributeName(rawValue: "open")!
 }

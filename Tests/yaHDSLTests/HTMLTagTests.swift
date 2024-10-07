@@ -289,6 +289,22 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func details() async throws {
+		try divLike(tagName: "details", Details.self)
+	}
+}
+
+extension HTMLTagTests {
+	func divLike<Tag: HTMLContentElement>(tagName: String, _ divLikeTag: Tag.Type) throws {
+		let tag = Tag {
+			"the content"
+		}
+
+		let expected = "<\(tagName)>the content</\(tagName)>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 
