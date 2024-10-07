@@ -311,6 +311,29 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func dl() async throws {
+		try divLike(tagName: "dl", Dl.self)
+	}
+
+	@Test func dt() async throws {
+		try divLike(tagName: "dt", Dt.self)
+	}
+
+	@Test func em() async throws {
+		try divLike(tagName: "em", Em.self)
+	}
+
+	@Test func embed() async throws {
+		let tag = Embed()
+			.withWidth(200)
+			.withHeight(100)
+			.withSrc("/barf/foob")
+
+		let expected = "<embed height=\"100\" src=\"/barf/foob\" width=\"200\">"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 extension HTMLTagTests {
