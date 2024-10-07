@@ -242,7 +242,30 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func data() async throws {
+		let tag = HtmlData {
+			"lettuce"
+		}
+			.withValue(1.23)
 
+		let expected = "<data value=\"1.23\">lettuce</data>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func datalist() async throws {
+		let tag = Datalist {
+			Option { "A" }
+				.withValue("AA")
+			Option { "B" }
+				.withValue("BB")
+		}
+			.setID("thelist")
+
+		let expected = "<datalist id=\"thelist\"><option value=\"AA\">A</option><option value=\"BB\">B</option></datalist>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 

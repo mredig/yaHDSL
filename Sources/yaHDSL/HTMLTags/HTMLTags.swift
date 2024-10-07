@@ -1,28 +1,5 @@
 
 
-
-
-
-public struct HtmlData: HTMLContentElement, GlobalAttributable, EventAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [AttributeName: AttributeValue] = [:]
-	public var attributesOptions: AttributesOptions?
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
-public struct Datalist: HTMLContentElement, GlobalAttributable, EventAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [AttributeName: AttributeValue] = [:]
-	public var attributesOptions: AttributesOptions?
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
 public struct Dd: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
@@ -454,16 +431,6 @@ public struct Ol: HTMLContentElement, GlobalAttributable, EventAttributable {
 }
 
 public struct Optgroup: HTMLContentElement, GlobalAttributable, EventAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [AttributeName: AttributeValue] = [:]
-	public var attributesOptions: AttributesOptions?
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
-public struct Option: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

@@ -57,4 +57,6 @@ public extension AttributeName {
 	static let height = AttributeName(rawValue: "height")!
 	static let width = AttributeName(rawValue: "width")!
 	static let span = AttributeName(rawValue: "span")!
+	static let label = AttributeName(rawValue: "label")!
+	static let selected = AttributeName(rawValue: "selected")!
 }
