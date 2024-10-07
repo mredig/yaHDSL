@@ -1,25 +1,5 @@
 
 
-public struct Caption: HTMLContentElement, GlobalAttributable, EventAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [AttributeName: AttributeValue] = [:]
-	public var attributesOptions: AttributesOptions?
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
-public struct Cite: HTMLContentElement, GlobalAttributable, EventAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [AttributeName: AttributeValue] = [:]
-	public var attributesOptions: AttributesOptions?
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
 public struct Code: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]

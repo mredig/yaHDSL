@@ -189,6 +189,26 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func caption() async throws {
+		let tag = Caption {
+			"Photo by: barfoo"
+		}
+
+		let expected = "<caption>Photo by: barfoo</caption>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func cite() async throws {
+		let tag = Cite {
+			"Photo by: barfoo"
+		}
+
+		let expected = "<cite>Photo by: barfoo</cite>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 
