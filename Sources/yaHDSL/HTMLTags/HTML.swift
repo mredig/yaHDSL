@@ -1,4 +1,4 @@
-public struct HTML: HTMLContainerNode, GlobalAttributes {
+public struct HTML: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

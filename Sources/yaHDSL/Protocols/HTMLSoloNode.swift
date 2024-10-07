@@ -1,4 +1,4 @@
-public protocol HTMLSoloNode: HTMLNode, GlobalAttributes {}
+public protocol HTMLSoloNode: HTMLNode, GlobalAttributable {}
 extension HTMLSoloNode {
 	public func render(withContext context: Context) throws -> Output {
 		guard let tag else { return "" }

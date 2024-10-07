@@ -1,5 +1,5 @@
 
-public struct Abbr: HTMLContainerNode, GlobalAttributes {
+public struct Abbr: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -9,7 +9,7 @@ public struct Abbr: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Address: HTMLContainerNode, GlobalAttributes {
+public struct Address: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -19,7 +19,7 @@ public struct Address: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Area: HTMLContainerNode, GlobalAttributes {
+public struct Area: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -29,7 +29,7 @@ public struct Area: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Article: HTMLContainerNode, GlobalAttributes {
+public struct Article: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -39,7 +39,7 @@ public struct Article: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Aside: HTMLContainerNode, GlobalAttributes {
+public struct Aside: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -49,7 +49,7 @@ public struct Aside: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Audio: HTMLContainerNode, GlobalAttributes {
+public struct Audio: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -59,7 +59,7 @@ public struct Audio: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct B: HTMLContainerNode, GlobalAttributes {
+public struct B: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -69,7 +69,7 @@ public struct B: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Base: HTMLContainerNode, GlobalAttributes {
+public struct Base: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -79,7 +79,7 @@ public struct Base: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Bdi: HTMLContainerNode, GlobalAttributes {
+public struct Bdi: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -89,7 +89,7 @@ public struct Bdi: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Bdo: HTMLContainerNode, GlobalAttributes {
+public struct Bdo: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -99,7 +99,7 @@ public struct Bdo: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Blockquote: HTMLContainerNode, GlobalAttributes {
+public struct Blockquote: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -109,7 +109,7 @@ public struct Blockquote: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Br: HTMLContainerNode, GlobalAttributes {
+public struct Br: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -119,7 +119,7 @@ public struct Br: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Button: HTMLContainerNode, GlobalAttributes {
+public struct Button: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -129,7 +129,7 @@ public struct Button: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Canvas: HTMLContainerNode, GlobalAttributes {
+public struct Canvas: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -139,7 +139,7 @@ public struct Canvas: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Caption: HTMLContainerNode, GlobalAttributes {
+public struct Caption: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -149,7 +149,7 @@ public struct Caption: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Cite: HTMLContainerNode, GlobalAttributes {
+public struct Cite: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -159,7 +159,7 @@ public struct Cite: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Code: HTMLContainerNode, GlobalAttributes {
+public struct Code: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -169,7 +169,7 @@ public struct Code: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Col: HTMLContainerNode, GlobalAttributes {
+public struct Col: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -179,7 +179,7 @@ public struct Col: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Colgroup: HTMLContainerNode, GlobalAttributes {
+public struct Colgroup: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -189,7 +189,7 @@ public struct Colgroup: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct HtmlData: HTMLContainerNode, GlobalAttributes {
+public struct HtmlData: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -199,7 +199,7 @@ public struct HtmlData: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Datalist: HTMLContainerNode, GlobalAttributes {
+public struct Datalist: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -209,7 +209,7 @@ public struct Datalist: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Dd: HTMLContainerNode, GlobalAttributes {
+public struct Dd: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -219,7 +219,7 @@ public struct Dd: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Del: HTMLContainerNode, GlobalAttributes {
+public struct Del: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -229,7 +229,7 @@ public struct Del: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Details: HTMLContainerNode, GlobalAttributes {
+public struct Details: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -239,7 +239,7 @@ public struct Details: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Dfn: HTMLContainerNode, GlobalAttributes {
+public struct Dfn: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -249,7 +249,7 @@ public struct Dfn: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Dialog: HTMLContainerNode, GlobalAttributes {
+public struct Dialog: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -259,7 +259,7 @@ public struct Dialog: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Dl: HTMLContainerNode, GlobalAttributes {
+public struct Dl: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -269,7 +269,7 @@ public struct Dl: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Dt: HTMLContainerNode, GlobalAttributes {
+public struct Dt: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -279,7 +279,7 @@ public struct Dt: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Em: HTMLContainerNode, GlobalAttributes {
+public struct Em: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -289,7 +289,7 @@ public struct Em: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Embed: HTMLContainerNode, GlobalAttributes {
+public struct Embed: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -299,7 +299,7 @@ public struct Embed: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Fieldset: HTMLContainerNode, GlobalAttributes {
+public struct Fieldset: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -309,7 +309,7 @@ public struct Fieldset: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Figcaption: HTMLContainerNode, GlobalAttributes {
+public struct Figcaption: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -319,7 +319,7 @@ public struct Figcaption: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Figure: HTMLContainerNode, GlobalAttributes {
+public struct Figure: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -329,7 +329,7 @@ public struct Figure: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Footer: HTMLContainerNode, GlobalAttributes {
+public struct Footer: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -339,7 +339,7 @@ public struct Footer: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Form: HTMLContainerNode, GlobalAttributes {
+public struct Form: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -349,7 +349,7 @@ public struct Form: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct H1: HTMLContainerNode, GlobalAttributes {
+public struct H1: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -359,7 +359,7 @@ public struct H1: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct H2: HTMLContainerNode, GlobalAttributes {
+public struct H2: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -369,7 +369,7 @@ public struct H2: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct H3: HTMLContainerNode, GlobalAttributes {
+public struct H3: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -379,7 +379,7 @@ public struct H3: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct H4: HTMLContainerNode, GlobalAttributes {
+public struct H4: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -389,7 +389,7 @@ public struct H4: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct H5: HTMLContainerNode, GlobalAttributes {
+public struct H5: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -399,7 +399,7 @@ public struct H5: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct H6: HTMLContainerNode, GlobalAttributes {
+public struct H6: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -409,7 +409,7 @@ public struct H6: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Header: HTMLContainerNode, GlobalAttributes {
+public struct Header: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -419,7 +419,7 @@ public struct Header: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Hgroup: HTMLContainerNode, GlobalAttributes {
+public struct Hgroup: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -429,7 +429,7 @@ public struct Hgroup: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Hr: HTMLContainerNode, GlobalAttributes {
+public struct Hr: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -439,7 +439,7 @@ public struct Hr: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct I: HTMLContainerNode, GlobalAttributes {
+public struct I: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -449,7 +449,7 @@ public struct I: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Iframe: HTMLContainerNode, GlobalAttributes {
+public struct Iframe: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -459,7 +459,7 @@ public struct Iframe: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Img: HTMLContainerNode, GlobalAttributes {
+public struct Img: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -469,7 +469,7 @@ public struct Img: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Input: HTMLContainerNode, GlobalAttributes {
+public struct Input: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -479,7 +479,7 @@ public struct Input: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Ins: HTMLContainerNode, GlobalAttributes {
+public struct Ins: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -489,7 +489,7 @@ public struct Ins: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Kbd: HTMLContainerNode, GlobalAttributes {
+public struct Kbd: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -499,7 +499,7 @@ public struct Kbd: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Label: HTMLContainerNode, GlobalAttributes {
+public struct Label: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -509,7 +509,7 @@ public struct Label: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Legend: HTMLContainerNode, GlobalAttributes {
+public struct Legend: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -519,7 +519,7 @@ public struct Legend: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Li: HTMLContainerNode, GlobalAttributes {
+public struct Li: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -529,7 +529,7 @@ public struct Li: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Link: HTMLContainerNode, GlobalAttributes {
+public struct Link: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -539,7 +539,7 @@ public struct Link: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Main: HTMLContainerNode, GlobalAttributes {
+public struct Main: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -549,7 +549,7 @@ public struct Main: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Map: HTMLContainerNode, GlobalAttributes {
+public struct Map: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -559,7 +559,7 @@ public struct Map: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Mark: HTMLContainerNode, GlobalAttributes {
+public struct Mark: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -569,7 +569,7 @@ public struct Mark: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Menu: HTMLContainerNode, GlobalAttributes {
+public struct Menu: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -579,7 +579,7 @@ public struct Menu: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Meta: HTMLContainerNode, GlobalAttributes {
+public struct Meta: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -589,7 +589,7 @@ public struct Meta: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Meter: HTMLContainerNode, GlobalAttributes {
+public struct Meter: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -599,7 +599,7 @@ public struct Meter: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Nav: HTMLContainerNode, GlobalAttributes {
+public struct Nav: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -609,7 +609,7 @@ public struct Nav: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Noscript: HTMLContainerNode, GlobalAttributes {
+public struct Noscript: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -619,7 +619,7 @@ public struct Noscript: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Object: HTMLContainerNode, GlobalAttributes {
+public struct Object: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -629,7 +629,7 @@ public struct Object: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Ol: HTMLContainerNode, GlobalAttributes {
+public struct Ol: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -639,7 +639,7 @@ public struct Ol: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Optgroup: HTMLContainerNode, GlobalAttributes {
+public struct Optgroup: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -649,7 +649,7 @@ public struct Optgroup: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Option: HTMLContainerNode, GlobalAttributes {
+public struct Option: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -659,7 +659,7 @@ public struct Option: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Output: HTMLContainerNode, GlobalAttributes {
+public struct Output: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -669,7 +669,7 @@ public struct Output: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct P: HTMLContainerNode, GlobalAttributes {
+public struct P: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -679,7 +679,7 @@ public struct P: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Param: HTMLContainerNode, GlobalAttributes {
+public struct Param: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -689,7 +689,7 @@ public struct Param: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Pre: HTMLContainerNode, GlobalAttributes {
+public struct Pre: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -699,7 +699,7 @@ public struct Pre: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Progress: HTMLContainerNode, GlobalAttributes {
+public struct Progress: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -709,7 +709,7 @@ public struct Progress: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Q: HTMLContainerNode, GlobalAttributes {
+public struct Q: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -719,7 +719,7 @@ public struct Q: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Rp: HTMLContainerNode, GlobalAttributes {
+public struct Rp: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -729,7 +729,7 @@ public struct Rp: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Rt: HTMLContainerNode, GlobalAttributes {
+public struct Rt: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -739,7 +739,7 @@ public struct Rt: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Ruby: HTMLContainerNode, GlobalAttributes {
+public struct Ruby: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -749,7 +749,7 @@ public struct Ruby: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct S: HTMLContainerNode, GlobalAttributes {
+public struct S: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -759,7 +759,7 @@ public struct S: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Samp: HTMLContainerNode, GlobalAttributes {
+public struct Samp: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -769,7 +769,7 @@ public struct Samp: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Script: HTMLContainerNode, GlobalAttributes {
+public struct Script: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -779,7 +779,7 @@ public struct Script: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Search: HTMLContainerNode, GlobalAttributes {
+public struct Search: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -789,7 +789,7 @@ public struct Search: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Section: HTMLContainerNode, GlobalAttributes {
+public struct Section: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -799,7 +799,7 @@ public struct Section: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Select: HTMLContainerNode, GlobalAttributes {
+public struct Select: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -809,7 +809,7 @@ public struct Select: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Small: HTMLContainerNode, GlobalAttributes {
+public struct Small: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -819,7 +819,7 @@ public struct Small: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Source: HTMLContainerNode, GlobalAttributes {
+public struct Source: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -829,7 +829,7 @@ public struct Source: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Span: HTMLContainerNode, GlobalAttributes {
+public struct Span: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -839,7 +839,7 @@ public struct Span: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Strong: HTMLContainerNode, GlobalAttributes {
+public struct Strong: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -849,7 +849,7 @@ public struct Strong: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Style: HTMLContainerNode, GlobalAttributes {
+public struct Style: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -859,7 +859,7 @@ public struct Style: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Sub: HTMLContainerNode, GlobalAttributes {
+public struct Sub: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -869,7 +869,7 @@ public struct Sub: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Summary: HTMLContainerNode, GlobalAttributes {
+public struct Summary: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -879,7 +879,7 @@ public struct Summary: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Sup: HTMLContainerNode, GlobalAttributes {
+public struct Sup: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -889,7 +889,7 @@ public struct Sup: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Svg: HTMLContainerNode, GlobalAttributes {
+public struct Svg: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -899,7 +899,7 @@ public struct Svg: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Table: HTMLContainerNode, GlobalAttributes {
+public struct Table: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -909,7 +909,7 @@ public struct Table: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Tbody: HTMLContainerNode, GlobalAttributes {
+public struct Tbody: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -919,7 +919,7 @@ public struct Tbody: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Td: HTMLContainerNode, GlobalAttributes {
+public struct Td: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -929,7 +929,7 @@ public struct Td: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Template: HTMLContainerNode, GlobalAttributes {
+public struct Template: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -939,7 +939,7 @@ public struct Template: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Textarea: HTMLContainerNode, GlobalAttributes {
+public struct Textarea: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -949,7 +949,7 @@ public struct Textarea: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Tfoot: HTMLContainerNode, GlobalAttributes {
+public struct Tfoot: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -959,7 +959,7 @@ public struct Tfoot: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Th: HTMLContainerNode, GlobalAttributes {
+public struct Th: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -969,7 +969,7 @@ public struct Th: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Thead: HTMLContainerNode, GlobalAttributes {
+public struct Thead: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -979,7 +979,7 @@ public struct Thead: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Title: HTMLContainerNode, GlobalAttributes {
+public struct Title: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -989,7 +989,7 @@ public struct Title: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Tr: HTMLContainerNode, GlobalAttributes {
+public struct Tr: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -999,7 +999,7 @@ public struct Tr: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Track: HTMLContainerNode, GlobalAttributes {
+public struct Track: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -1009,7 +1009,7 @@ public struct Track: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct U: HTMLContainerNode, GlobalAttributes {
+public struct U: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -1019,7 +1019,7 @@ public struct U: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Ul: HTMLContainerNode, GlobalAttributes {
+public struct Ul: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -1029,7 +1029,7 @@ public struct Ul: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Var: HTMLContainerNode, GlobalAttributes {
+public struct Var: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -1039,7 +1039,7 @@ public struct Var: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Video: HTMLContainerNode, GlobalAttributes {
+public struct Video: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
@@ -1049,7 +1049,7 @@ public struct Video: HTMLContainerNode, GlobalAttributes {
 	}
 }
 
-public struct Wbr: HTMLContainerNode, GlobalAttributes {
+public struct Wbr: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

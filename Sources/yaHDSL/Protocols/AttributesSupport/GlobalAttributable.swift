@@ -1,6 +1,6 @@
-public protocol GlobalAttributes: ClassAttributable {}
+public protocol GlobalAttributable: ClassAttributable {}
 
-public extension GlobalAttributes {
+public extension GlobalAttributable {
 	func setAccessKey(_ key: Character) -> Self {
 		setAttribute(named: .accessKey, value: "\(key)")
 	}
