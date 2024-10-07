@@ -5,6 +5,14 @@ public extension GlobalAttributable {
 		setAttribute(named: .accessKey, value: "\(key)")
 	}
 
+	func setAutofocus(_ flag: Bool) -> Self {
+		if flag {
+			setAttributeFlag(named: .autoFocus)
+		} else {
+			removeAttribute(named: .autoFocus)
+		}
+	}
+
 	func setContentEditable(_ flag: Bool) -> Self {
 		setAttribute(named: .contentEditable, value: .bool(flag))
 	}
@@ -134,8 +142,9 @@ public struct KeyboardInputMode: RawRepresentable, Sendable, Hashable {
 }
 
 extension AttributeName {
-	public static let `class` = AttributeName(rawValue: "class")!
 	public static let accessKey = AttributeName(rawValue: "accesskey")!
+	public static let autoFocus = AttributeName(rawValue: "autofocus")!
+	public static let `class` = AttributeName(rawValue: "class")!
 	public static let contentEditable = AttributeName(rawValue: "contenteditable")!
 	public static let dir = AttributeName(rawValue: "dir")!
 	public static let draggable = AttributeName(rawValue: "draggable")!
