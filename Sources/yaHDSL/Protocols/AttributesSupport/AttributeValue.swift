@@ -10,12 +10,12 @@ public enum AttributeValue: Sendable {
 	case bool(Bool)
 	case flag
 
-	func renderAttribute(named name: String) -> String {
+	func renderAttribute(named name: String, preferNamedCharacterReferences: Bool) -> String {
 		switch self {
 		case .string(let string):
-			"\(name)=\"\(Self.sanitizeValueString(string))\""
+			"\(name)=\"\(Self.sanitizeValueString(string, preferNamedCharacterReferences: preferNamedCharacterReferences))\""
 		case .list(let array):
-			"\(name)=\"\(Self.sanitizeValueString(array.joined(separator: " ")))\""
+			"\(name)=\"\(Self.sanitizeValueString(array.joined(separator: " "), preferNamedCharacterReferences: preferNamedCharacterReferences))\""
 		case .int(let int):
 			"\(name)=\"\(int)\""
 		case .float(let double):
@@ -27,13 +27,17 @@ public enum AttributeValue: Sendable {
 		}
 	}
 
-	private static func sanitizeValueString(_ string: String) -> String {
+	private static func sanitizeValueString(_ string: String, preferNamedCharacterReferences: Bool) -> String {
 		#if canImport(Foundation)
 		string.reduce(into: "") { outString, character in
 			guard
 				character.unicodeScalars.allSatisfy({ CharacterMapper.attributeValueAllowedCharacters.contains($0) })
 			else {
-				outString += CharacterMapper.preferName(for: character)
+				if preferNamedCharacterReferences {
+					outString += CharacterMapper.preferName(for: character)
+				} else {
+					outString += CharacterMapper.getCode(for: character)
+				}
 				return
 			}
 			outString.append(character)

@@ -1,5 +1,6 @@
 public protocol Attributable: Sendable {
 	var attributes: [AttributeName: AttributeValue] { get set }
+	var attributesOptions: AttributesOptions? { get set }
 
 	func setAttribute(named name: String, value: AttributeValue) throws(AttributeName.Error) -> Self
 	func setAttribute(named name: AttributeName, value: AttributeValue) -> Self
@@ -9,6 +10,8 @@ public protocol Attributable: Sendable {
 }
 
 public extension Attributable {
+	nonisolated(unsafe) static var defaultAttributesOptions: AttributesOptions { .init() }
+
 	func setAttribute(named name: String, value: AttributeValue) throws(AttributeName.Error) -> Self {
 		let name = try AttributeName(name)
 		return setAttribute(named: name, value: value)
@@ -53,12 +56,20 @@ public extension Attributable {
 	}
 
 	func renderAttributes() -> String {
+		let options = attributesOptions ?? Self.defaultAttributesOptions
 		let accumulator: [String] = attributes.reduce(into: []) { accum, element in
 			let name = element.key.rawValue
 			let value = element.value
-			accum.append(value.renderAttribute(named: name))
+			accum.append(value.renderAttribute(named: name, preferNamedCharacterReferences: options.preferNamedCharacterReferences))
 		}
-		return accumulator.joined(separator: " ")
+		let accumulated = {
+			if options.sortAttributes {
+				accumulator.sorted()
+			} else {
+				accumulator
+			}
+		}()
+		return accumulated.joined(separator: " ")
 	}
 }
 
