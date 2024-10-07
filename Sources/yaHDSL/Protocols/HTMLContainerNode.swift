@@ -40,10 +40,15 @@ extension HTMLContainerNode {
 			}
 			return out
 		}()
+		let attributeContent = renderAttributes()
 		switch context.mode {
 		case .minify:
 			if let tag {
-				return "<\(tag)>\(content.joined())</\(tag)>"
+				if attributeContent.isEmpty {
+					return "<\(tag)>\(content.joined())</\(tag)>"
+				} else {
+					return "<\(tag) \(attributeContent)>\(content.joined())</\(tag)>"
+				}
 			} else {
 				return "\(content.joined())"
 			}
@@ -53,7 +58,11 @@ extension HTMLContainerNode {
 				
 				let output: String = {
 					var builder: [String] = []
-					builder.append("\(indentation)<\(tag)>")
+					if attributeContent.isEmpty {
+						builder.append("\(indentation)<\(tag)>")
+					} else {
+						builder.append("\(indentation)<\(tag) \(attributeContent)>")
+					}
 					if content.isEmpty == false {
 						builder.append("\(content.joined())")
 					}
