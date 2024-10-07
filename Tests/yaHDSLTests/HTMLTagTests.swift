@@ -28,6 +28,21 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func abbr() async throws {
+		let tag = Abbr {
+			"FOMO"
+		}
+			.setTitleAttribute("Fear Of Missing Out")
+
+		let expected = "<abbr title=\"Fear Of Missing Out\">FOMO</abbr>"
+
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+}
+
+
+extension HTMLTagTests {
 	private func simpleRender<Component: HTMLNode>(_ component: Component) throws -> String {
 		let context = yaHTMLDocument.Context(mode: .minify, userInfo: [:])
 		return try component.render(withContext: context).with {
