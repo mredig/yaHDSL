@@ -149,6 +149,19 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func blockquote() async throws {
+		let tag = Blockquote {
+			"foo"
+			"bar"
+			"baz"
+		}
+			.withCitation("https://bar.foo/article")
+
+		let expected = "<blockquote cite=\"https://bar.foo/article\">foo bar baz</blockquote>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 
