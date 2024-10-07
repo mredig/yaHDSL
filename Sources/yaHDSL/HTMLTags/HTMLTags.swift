@@ -1,25 +1,7 @@
 
 
 
-public struct Col: HTMLContentElement, GlobalAttributable, EventAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [AttributeName: AttributeValue] = [:]
-	public var attributesOptions: AttributesOptions?
 
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
-public struct Colgroup: HTMLContentElement, GlobalAttributable, EventAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [AttributeName: AttributeValue] = [:]
-	public var attributesOptions: AttributesOptions?
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
 
 public struct HtmlData: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]

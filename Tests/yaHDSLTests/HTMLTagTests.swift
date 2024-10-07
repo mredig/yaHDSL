@@ -221,6 +221,28 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func col() async throws {
+		let tag = Col()
+			.withSpan(3)
+
+		let expected = "<col span=\"3\">"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func colgroup() async throws {
+		let tag = Colgroup {
+			Col()
+				.withSpan(3)
+		}
+
+		let expected = "<colgroup><col span=\"3\"></colgroup>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+
 }
 
 
