@@ -5,4 +5,7 @@ public struct Br: HTMLSoloNode, GlobalAttributable, EventAttributable {
 	public var attributesOptions: AttributesOptions?
 
 	public init() {}
+	public init(attributes: [AttributeName: AttributeValue]) {
+		self.attributes = attributes
+	}
 }

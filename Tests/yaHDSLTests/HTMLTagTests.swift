@@ -53,6 +53,18 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func area() async throws {
+		let tag = Area(attributes: [:])
+			.withShape(.circle)
+			.withCoords([24, 534, 234])
+			.withAlt("Sample")
+			.withHref("/foo")
+
+		let expected = "<area alt=\"Sample\" coords=\"24,534,234\" href=\"/foo\" shape=\"circle\">"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 

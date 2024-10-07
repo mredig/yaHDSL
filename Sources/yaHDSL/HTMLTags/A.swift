@@ -95,8 +95,8 @@ public extension A {
 		setAttribute(named: .target, value: target.rawValue)
 	}
 
-	func withType(_ type: String) -> Self {
-		setAttribute(named: .type, value: type)
+	func withType(_ mediaType: String) -> Self {
+		setAttribute(named: .type, value: mediaType)
 	}
 }
 
