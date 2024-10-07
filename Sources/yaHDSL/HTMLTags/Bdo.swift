@@ -1,4 +1,4 @@
-public struct Bdo: HTMLContainerNode, GlobalAttributable, EventAttributable {
+public struct Bdo: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

@@ -1,4 +1,4 @@
-public struct Aside: HTMLContainerNode, GlobalAttributable, EventAttributable {
+public struct Aside: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

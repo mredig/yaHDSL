@@ -1,4 +1,4 @@
-public struct Br: HTMLSoloNode, GlobalAttributable, EventAttributable {
+public struct Br: HTMLVoidElement, GlobalAttributable, EventAttributable {
 	public var tag: String? { "br" }
 
 	public var attributes: [AttributeName: AttributeValue] = [:]

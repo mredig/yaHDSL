@@ -27,7 +27,7 @@ public struct HTMLContainerNodeBuilder {
 		components.flatMap { $0 }
 	}
 
-	public static func buildFinalResult<ResultNode: HTMLContainerNode>(_ component: Component) -> ResultNode {
+	public static func buildFinalResult<ResultNode: HTMLContentElement>(_ component: Component) -> ResultNode {
 		ResultNode(childNodes: component)
 	}
 }

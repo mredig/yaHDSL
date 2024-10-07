@@ -2,7 +2,7 @@
 import Foundation
 #endif
 
-public struct Audio: HTMLContainerNode, GlobalAttributable, EventAttributable {
+public struct Audio: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

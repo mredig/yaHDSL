@@ -1,4 +1,4 @@
-public struct Empty: HTMLSoloNode {
+public struct Empty: HTMLVoidElement {
 	public var tag: String? { nil }
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

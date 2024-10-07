@@ -1,4 +1,4 @@
-public protocol HTMLContainerNode: HTMLNode, Attributable {
+public protocol HTMLContentElement: HTMLNode, Attributable {
 	var childNodes: [any HTMLNode] { get set }
 
 	init(childNodes: [any HTMLNode])
@@ -7,7 +7,7 @@ public protocol HTMLContainerNode: HTMLNode, Attributable {
 	mutating func addChildNode(_ child: any HTMLNode)
 }
 
-extension HTMLContainerNode {
+extension HTMLContentElement {
 	public var tag: String? { String(describing: Self.self).lowercased() }
 
 	public init(@HTMLContainerNodeBuilder _ builder: () -> Self) {

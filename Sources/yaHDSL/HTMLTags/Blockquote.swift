@@ -2,7 +2,7 @@
 import Foundation
 #endif
 
-public struct Blockquote: HTMLContainerNode, GlobalAttributable, EventAttributable {
+public struct Blockquote: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

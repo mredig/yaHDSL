@@ -1,7 +1,7 @@
-public protocol HTMLSoloNode: HTMLNode, GlobalAttributable {
+public protocol HTMLVoidElement: HTMLNode, GlobalAttributable {
 	init()
 }
-extension HTMLSoloNode {
+extension HTMLVoidElement {
 	public func render(withContext context: Context) throws -> Output {
 		guard let tag else { return "" }
 		let attributeContent = renderAttributes()

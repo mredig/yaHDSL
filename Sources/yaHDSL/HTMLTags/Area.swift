@@ -2,7 +2,7 @@
 import Foundation
 #endif
 
-public struct Area: HTMLSoloNode, GlobalAttributable, EventAttributable {
+public struct Area: HTMLVoidElement, GlobalAttributable, EventAttributable {
 	public var tag: String? { "area" }
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

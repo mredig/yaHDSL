@@ -1,4 +1,4 @@
-public struct Bdi: HTMLContainerNode, GlobalAttributable, EventAttributable {
+public struct Bdi: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
