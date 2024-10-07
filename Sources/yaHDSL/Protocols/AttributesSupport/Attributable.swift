@@ -1,42 +1,52 @@
 public protocol Attributable: Sendable {
-	var attributes: [String: AttributeValue] { get set }
+	var attributes: [AttributeName: AttributeValue] { get set }
 
-	func setAttribute(named name: String, value: AttributeValue) -> Self
-	func removeAttribute(named name: String) -> Self
+	func setAttribute(named name: String, value: AttributeValue) throws(AttributeName.Error) -> Self
+	func setAttribute(named name: AttributeName, value: AttributeValue) -> Self
+	func removeAttribute(named name: AttributeName) -> Self
 
 	func renderAttributes() -> String
 }
 
 public extension Attributable {
-	func setAttribute(named name: String, value: AttributeValue) -> Self {
+	func setAttribute(named name: String, value: AttributeValue) throws(AttributeName.Error) -> Self {
+		let name = try AttributeName(name)
+		return setAttribute(named: name, value: value)
+	}
+
+	func setAttribute(named name: AttributeName, value: AttributeValue) -> Self {
 		var new = self
 		new.attributes[name] = value
 		return new
 	}
 
-	func removeAttribute(named name: String) -> Self {
+	func removeAttribute(named name: AttributeName) -> Self {
 		var new = self
 		new.attributes[name] = nil
 		return new
 	}
 
-	func setAttribute(named name: String, value: String) -> Self {
+	func setAttribute<T: RawRepresentable>(named name: AttributeName, value: T) -> Self where T.RawValue == String {
+		setAttribute(named: name, value: value.rawValue)
+	}
+
+	func setAttribute(named name: AttributeName, value: String) -> Self {
 		setAttribute(named: name, value: .string(value))
 	}
 
-	func setAttribute(named name: String, values: String...) -> Self {
+	func setAttribute(named name: AttributeName, values: String...) -> Self {
 		setAttribute(named: name, value: .list(values))
 	}
 
-	func setAttribute(named name: String, value: any BinaryInteger) -> Self {
+	func setAttribute(named name: AttributeName, value: any BinaryInteger) -> Self {
 		setAttribute(named: name, value: .int(Int(value)))
 	}
 
-	func setAttribute(named name: String, value: any BinaryFloatingPoint) -> Self {
+	func setAttribute(named name: AttributeName, value: any BinaryFloatingPoint) -> Self {
 		setAttribute(named: name, value: .float(Double(value)))
 	}
 
-	func setAttributeFlag(named name: String) -> Self {
+	func setAttributeFlag(named name: AttributeName) -> Self {
 		var new = self
 		new.attributes[name] = .flag
 		return new
@@ -44,10 +54,11 @@ public extension Attributable {
 
 	func renderAttributes() -> String {
 		let accumulator: [String] = attributes.reduce(into: []) { accum, element in
-			let name = element.key
+			let name = element.key.rawValue
 			let value = element.value
 			accum.append(value.renderAttribute(named: name))
 		}
 		return accumulator.joined(separator: " ")
 	}
 }
+
