@@ -1,996 +1,952 @@
-public struct HTML: HTMLContainerNode, ClassAttributable, IDAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
-public struct Head: HTMLContainerNode, ClassAttributable, IDAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
-public struct Body: HTMLContainerNode, ClassAttributable, IDAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
-public struct Div: HTMLContainerNode, ClassAttributable, IDAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
-public struct A: HTMLContainerNode, ClassAttributable, IDAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
 
-public struct Abbr: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Abbr: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Address: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Address: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Area: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Area: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Article: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Article: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Aside: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Aside: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Audio: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Audio: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct B: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct B: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Base: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Base: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Bdi: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Bdi: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Bdo: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Bdo: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Blockquote: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Blockquote: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Br: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Br: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Button: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Button: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Canvas: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Canvas: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Caption: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Caption: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Cite: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Cite: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Code: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Code: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Col: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Col: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Colgroup: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Colgroup: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct HtmlData: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct HtmlData: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Datalist: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Datalist: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Dd: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Dd: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Del: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Del: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Details: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Details: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Dfn: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Dfn: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Dialog: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Dialog: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Dl: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Dl: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Dt: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Dt: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Em: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Em: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Embed: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Embed: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Fieldset: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Fieldset: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Figcaption: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Figcaption: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Figure: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Figure: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Footer: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Footer: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Form: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Form: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct H1: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct H1: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct H2: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct H2: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct H3: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct H3: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct H4: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct H4: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct H5: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct H5: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct H6: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct H6: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Header: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Header: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Hgroup: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Hgroup: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Hr: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Hr: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct I: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct I: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Iframe: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Iframe: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Img: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Img: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Input: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Input: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Ins: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Ins: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Kbd: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Kbd: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Label: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Label: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Legend: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Legend: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Li: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Li: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Link: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Link: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Main: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Main: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Map: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Map: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Mark: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Mark: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Menu: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Menu: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Meta: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Meta: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Meter: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Meter: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Nav: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Nav: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Noscript: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Noscript: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Object: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Object: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Ol: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Ol: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Optgroup: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Optgroup: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Option: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Option: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Output: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Output: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct P: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct P: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Param: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Param: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Pre: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Pre: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Progress: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Progress: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Q: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Q: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Rp: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Rp: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Rt: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Rt: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Ruby: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Ruby: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct S: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct S: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Samp: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Samp: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Script: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Script: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Search: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Search: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Section: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Section: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Select: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Select: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Small: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Small: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Source: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Source: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Span: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Span: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Strong: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Strong: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Style: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Style: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Sub: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Sub: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Summary: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Summary: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Sup: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Sup: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Svg: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Svg: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Table: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Table: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Tbody: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Tbody: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Td: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Td: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Template: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Template: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Textarea: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Textarea: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Tfoot: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Tfoot: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Th: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Th: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Thead: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Thead: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Title: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Title: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Tr: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Tr: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Track: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Track: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct U: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct U: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Ul: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Ul: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Var: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Var: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Video: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Video: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
 }
 
-public struct Wbr: HTMLContainerNode, ClassAttributable, IDAttributable {
+public struct Wbr: HTMLContainerNode, GlobalAttributes {
 	public var childNodes: [any HTMLNode]
-	public var attributes: [String: AttributeValue] = [:]
+	public var attributes: [AttributeName: AttributeValue] = [:]
 
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
