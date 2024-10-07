@@ -45,7 +45,6 @@ import yaHDSL
 		Head {
 			"foooooo"
 		}
-
 		Body {
 			Div {
 				if yes {
@@ -71,12 +70,8 @@ import yaHDSL
 						"ifno"
 					}
 				}
-
 				"Foo"
-
 				"bar"
-
-
 			}
 		}
 	}
