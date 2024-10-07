@@ -209,6 +209,18 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func code() async throws {
+		let tag = Span {
+			"Run"
+			Code { "method()" }
+			"or die trying."
+		}
+
+		let expected = "<span>Run<code>method()</code>or die trying.</span>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 
