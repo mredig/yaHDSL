@@ -103,6 +103,17 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func b() async throws {
+		let tag = P {
+			"foo"
+			B { "bar" }
+		}
+
+		let expected = "<p>foo<b>bar</b></p>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 
