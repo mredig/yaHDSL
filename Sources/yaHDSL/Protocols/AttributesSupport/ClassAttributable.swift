@@ -10,13 +10,13 @@ public protocol ClassAttributable: Attributable {
 public extension ClassAttributable {
 	func addClasses(_ newClasses: [String]) -> Self {
 		var classList: [String]
-		if let existing = attributes["class"], case .list(let contents) = existing {
+		if let existing = attributes[.class], case .list(let contents) = existing {
 			classList = contents
 		} else {
 			classList = []
 		}
 		classList.append(contentsOf: newClasses)
-		return setAttribute(named: "class", value: .list(classList))
+		return setAttribute(named: .class, value: .list(classList))
 	}
 
 	func addClass(_ class: String) -> Self {
@@ -24,7 +24,7 @@ public extension ClassAttributable {
 	}
 
 	func setClasses(_ newClasses: [String]) -> Self {
-		return setAttribute(named: "class", value: .list(newClasses))
+		return setAttribute(named: .class, value: .list(newClasses))
 	}
 
 	func setClass(_ class: String) -> Self {
@@ -33,12 +33,12 @@ public extension ClassAttributable {
 
 	func removeClasses(_ removedClasses: [String]) -> Self {
 		guard
-			let existing = attributes["class"], case .list(var classList) = existing
+			let existing = attributes[.class], case .list(var classList) = existing
 		else { return self }
 		for removedClass in removedClasses {
 			classList.removeAll(where: { $0 == removedClass })
 		}
-		return setAttribute(named: "class", value: .list(classList))
+		return setAttribute(named: .class, value: .list(classList))
 	}
 
 	func removeClass(_ class: String) -> Self {
