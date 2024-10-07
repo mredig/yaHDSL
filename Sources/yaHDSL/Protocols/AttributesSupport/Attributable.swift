@@ -1,39 +1,45 @@
 public protocol Attributable: Sendable {
 	var attributes: [String: AttributeValue] { get set }
 
-	mutating func setAttribute(named name: String, value: AttributeValue)
-	mutating func removeAttribute(named name: String)
+	func setAttribute(named name: String, value: AttributeValue) -> Self
+	func removeAttribute(named name: String) -> Self
 
 	func renderAttributes() -> String
 }
 
 public extension Attributable {
-	mutating func setAttribute(named name: String, value: AttributeValue) {
-		attributes[name] = value
+	func setAttribute(named name: String, value: AttributeValue) -> Self {
+		var new = self
+		new.attributes[name] = value
+		return new
 	}
 
-	mutating func removeAttribute(named name: String) {
-		attributes[name] = nil
+	func removeAttribute(named name: String) -> Self {
+		var new = self
+		new.attributes[name] = nil
+		return new
 	}
 
-	mutating func setAttribute(named name: String, value: String) {
+	func setAttribute(named name: String, value: String) -> Self {
 		setAttribute(named: name, value: .string(value))
 	}
 
-	mutating func setAttribute(named name: String, values: String...) {
+	func setAttribute(named name: String, values: String...) -> Self {
 		setAttribute(named: name, value: .list(values))
 	}
 
-	mutating func setAttribute(named name: String, value: any BinaryInteger) {
+	func setAttribute(named name: String, value: any BinaryInteger) -> Self {
 		setAttribute(named: name, value: .int(Int(value)))
 	}
 
-	mutating func setAttribute(named name: String, value: any BinaryFloatingPoint) {
+	func setAttribute(named name: String, value: any BinaryFloatingPoint) -> Self {
 		setAttribute(named: name, value: .float(Double(value)))
 	}
 
-	mutating func setAttributeFlag(named name: String) {
-		attributes[name] = .flag
+	func setAttributeFlag(named name: String) -> Self {
+		var new = self
+		new.attributes[name] = .flag
+		return new
 	}
 
 	func renderAttributes() -> String {
