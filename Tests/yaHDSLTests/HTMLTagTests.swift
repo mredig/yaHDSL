@@ -114,6 +114,18 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func base() async throws {
+		let tag = Head {
+			Base()
+				.withHref(URL(string: "https://foo.bar")!)
+				.withTarget(.blank)
+		}
+
+		let expected = "<head><base href=\"https://foo.bar\" target=\"_blank\"></head>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 
