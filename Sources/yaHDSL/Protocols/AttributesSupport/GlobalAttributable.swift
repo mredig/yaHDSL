@@ -141,28 +141,28 @@ public struct KeyboardInputMode: RawRepresentable, Sendable, Hashable {
 	public static let url = KeyboardInputMode(rawValue: "url")
 }
 
-extension AttributeName {
-	public static let accessKey = AttributeName(rawValue: "accesskey")!
-	public static let autoFocus = AttributeName(rawValue: "autofocus")!
-	public static let `class` = AttributeName(rawValue: "class")!
-	public static let contentEditable = AttributeName(rawValue: "contenteditable")!
-	public static let dir = AttributeName(rawValue: "dir")!
-	public static let draggable = AttributeName(rawValue: "draggable")!
-	public static let enterKeyHint = AttributeName(rawValue: "enterkeyhint")!
-	public static let hidden = AttributeName(rawValue: "hidden")!
-	public static let id = AttributeName(rawValue: "id")!
-	public static let inert = AttributeName(rawValue: "inert")!
-	public static let inputMode = AttributeName(rawValue: "inputmode")!
-	public static let lang = AttributeName(rawValue: "lang")!
-	public static let popover = AttributeName(rawValue: "popover")!
-	public static let popoverTarget = AttributeName(rawValue: "popovertarget")!
-	public static let spellcheck = AttributeName(rawValue: "spellcheck")!
-	public static let style = AttributeName(rawValue: "style")!
-	public static let tabIndex = AttributeName(rawValue: "tabindex")!
-	public static let title = AttributeName(rawValue: "title")!
-	public static let translate = AttributeName(rawValue: "translate")!
+public extension AttributeName {
+	static let accessKey = AttributeName(rawValue: "accesskey")!
+	static let autoFocus = AttributeName(rawValue: "autofocus")!
+	static let `class` = AttributeName(rawValue: "class")!
+	static let contentEditable = AttributeName(rawValue: "contenteditable")!
+	static let dir = AttributeName(rawValue: "dir")!
+	static let draggable = AttributeName(rawValue: "draggable")!
+	static let enterKeyHint = AttributeName(rawValue: "enterkeyhint")!
+	static let hidden = AttributeName(rawValue: "hidden")!
+	static let id = AttributeName(rawValue: "id")!
+	static let inert = AttributeName(rawValue: "inert")!
+	static let inputMode = AttributeName(rawValue: "inputmode")!
+	static let lang = AttributeName(rawValue: "lang")!
+	static let popover = AttributeName(rawValue: "popover")!
+	static let popoverTarget = AttributeName(rawValue: "popovertarget")!
+	static let spellcheck = AttributeName(rawValue: "spellcheck")!
+	static let style = AttributeName(rawValue: "style")!
+	static let tabIndex = AttributeName(rawValue: "tabindex")!
+	static let title = AttributeName(rawValue: "title")!
+	static let translate = AttributeName(rawValue: "translate")!
 
-	public static func data(_ name: String) throws(Error) -> AttributeName {
+	static func data(_ name: String) throws(Error) -> AttributeName {
 		try AttributeName("data-\(name)")
 	}
 }

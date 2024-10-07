@@ -78,10 +78,3 @@ public extension Area {
 		setAttribute(named: .type, value: mediaType)
 	}
 }
-
-public extension AttributeName {
-	static let alt = try! AttributeName("alt")
-	static let coords = try! AttributeName("coords")
-	static let media = try! AttributeName("media")
-	static let shape = try! AttributeName("shape")
-}

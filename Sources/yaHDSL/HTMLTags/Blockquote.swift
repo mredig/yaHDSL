@@ -23,7 +23,3 @@ public extension Blockquote {
 	}
 	#endif
 }
-
-public extension AttributeName {
-	static let cite = AttributeName(rawValue: "cite")!
-}

@@ -69,12 +69,3 @@ public extension Audio {
 	}
 	#endif
 }
-
-public extension AttributeName {
-	static let autoplay = AttributeName(rawValue: "autoplay")!
-	static let controls = AttributeName(rawValue: "controls")!
-	static let loop = AttributeName(rawValue: "loop")!
-	static let muted = AttributeName(rawValue: "muted")!
-	static let preload = AttributeName(rawValue: "preload")!
-	static let src = AttributeName(rawValue: "src")!
-}

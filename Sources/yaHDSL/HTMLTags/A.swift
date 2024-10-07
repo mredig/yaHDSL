@@ -99,14 +99,3 @@ public extension A {
 		setAttribute(named: .type, value: mediaType)
 	}
 }
-
-public extension AttributeName {
-	static let href = try! AttributeName("href")
-	static let download = try! AttributeName("download")
-	static let hreflang = try! AttributeName("hreflang")
-	static let ping = try! AttributeName("ping")
-	static let referrerpolicy = try! AttributeName("referrerpolicy")
-	static let rel = try! AttributeName("rel")
-	static let target = try! AttributeName("target")
-	static let type = try! AttributeName("type")
-}

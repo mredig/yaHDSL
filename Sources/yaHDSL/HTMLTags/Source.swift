@@ -47,8 +47,3 @@ public extension Source {
 		setAttribute(named: .type, value: mimeType)
 	}
 }
-
-public extension AttributeName {
-	static let sizes = AttributeName(rawValue: "sizes")!
-	static let srcset = AttributeName(rawValue: "srcset")!
-}
