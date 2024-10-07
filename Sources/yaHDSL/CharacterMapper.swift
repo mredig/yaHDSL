@@ -1,3 +1,4 @@
+#if canImport(Foundation)
 import Foundation
 
 public enum CharacterMapper {
@@ -46,3 +47,4 @@ public enum CharacterMapper {
 			.joined()
 	}
 }
+#endif
