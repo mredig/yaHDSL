@@ -39,6 +39,20 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func address() async throws {
+		let tag = Address {
+			"Bob Loblaw"
+			Br()
+			"123 Law Bomb Dr"
+			Br()
+			"Orange County, CA 90210"
+		}
+
+		let expected = "<address>Bob Loblaw<br>123 Law Bomb Dr<br>Orange County, CA 90210</address>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 

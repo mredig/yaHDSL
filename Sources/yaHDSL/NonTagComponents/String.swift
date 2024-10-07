@@ -8,7 +8,11 @@ extension String: HTMLNode {
 		if nextNode is String {
 			return self + " "
 		} else {
-			return self + "\n"
+			if context.mode == .minify {
+				return self
+			} else {
+				return self + "\n"
+			}
 		}
 	}
 }

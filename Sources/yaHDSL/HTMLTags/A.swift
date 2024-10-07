@@ -2,7 +2,7 @@
 import Foundation
 #endif
 
-public struct A: HTMLContainerNode, GlobalAttributable {
+public struct A: HTMLContainerNode, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

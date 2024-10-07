@@ -2,7 +2,7 @@ public struct yaHTMLDocument: Sendable {
 	public struct Context: Sendable {
 		public static let `default` = Context(mode: .minify, userInfo: [:])
 		public static let `defaultPretty` = Context(mode: .tabIndentation, userInfo: [:])
-		public enum Mode: Sendable {
+		public enum Mode: Sendable, Hashable {
 			case minify
 			case pretty(indentation: String)
 			public static let twoSpaceIndentation = Self.pretty(indentation: "  ")
