@@ -291,15 +291,15 @@ struct HTMLTagTests {
 	}
 
 	@Test func details() async throws {
-		try divLike(tagName: "details", Details.self)
+		try simpleContainer(tagName: "details", Details.self)
 	}
 
 	@Test func dfn() async throws {
-		try divLike(tagName: "dfn", Dfn.self)
+		try simpleContainer(tagName: "dfn", Dfn.self)
 	}
 
 	@Test func dialog() async throws {
-		try divLike(tagName: "dialog", Dialog.self)
+		try simpleContainer(tagName: "dialog", Dialog.self)
 	}
 
 	@Test func div() async throws {
@@ -313,15 +313,15 @@ struct HTMLTagTests {
 	}
 
 	@Test func dl() async throws {
-		try divLike(tagName: "dl", Dl.self)
+		try simpleContainer(tagName: "dl", Dl.self)
 	}
 
 	@Test func dt() async throws {
-		try divLike(tagName: "dt", Dt.self)
+		try simpleContainer(tagName: "dt", Dt.self)
 	}
 
 	@Test func em() async throws {
-		try divLike(tagName: "em", Em.self)
+		try simpleContainer(tagName: "em", Em.self)
 	}
 
 	@Test func embed() async throws {
@@ -337,7 +337,7 @@ struct HTMLTagTests {
 }
 
 extension HTMLTagTests {
-	func divLike<Tag: HTMLContentElement>(tagName: String, _ divLikeTag: Tag.Type) throws {
+	func simpleContainer<Tag: HTMLContentElement>(tagName: String, _ divLikeTag: Tag.Type) throws {
 		let tag = Tag {
 			"the content"
 		}
