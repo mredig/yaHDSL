@@ -293,6 +293,24 @@ struct HTMLTagTests {
 	@Test func details() async throws {
 		try divLike(tagName: "details", Details.self)
 	}
+
+	@Test func dfn() async throws {
+		try divLike(tagName: "dfn", Dfn.self)
+	}
+
+	@Test func dialog() async throws {
+		try divLike(tagName: "dialog", Dialog.self)
+	}
+
+	@Test func div() async throws {
+		let tag = Div(id: "bob") {
+			"burger"
+		}
+
+		let expected = "<div id=\"bob\">burger</div>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 extension HTMLTagTests {

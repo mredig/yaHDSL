@@ -1,12 +1,8 @@
-public struct Div: HTMLContentElement, GlobalAttributable, EventAttributable {
+public struct Dfn: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
 
-	public init(id: String, @HTMLContainerNodeBuilder builder: () -> Div) {
-		self = builder()
-		self = setID(id)
-	}
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
