@@ -1,4 +1,4 @@
-public protocol HTMLContainerNode: HTMLNode {
+public protocol HTMLContainerNode: HTMLNode, Attributable {
 	var childNodes: [any HTMLNode] { get set }
 
 	init(childNodes: [any HTMLNode])
