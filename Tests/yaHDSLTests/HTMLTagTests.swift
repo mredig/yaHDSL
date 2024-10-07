@@ -1,4 +1,5 @@
 import Testing
+import Foundation
 import yaHDSL
 
 struct HTMLTagTests {
@@ -84,6 +85,21 @@ struct HTMLTagTests {
 		}
 
 		let expected = "<aside><h3>Foo</h3><p>baz bar boof</p></aside>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func audio() async throws {
+		let tag = Audio {
+			Source()
+				.withSrc(URL(string: "https://youtube.com/notsong.mp3")!)
+				.withType("audio/ogg")
+			"Your browser sucks"
+		}
+			.withControls(true)
+			.withMuted(true)
+
+		let expected = "<audio controls muted><source src=\"https://youtube.com/notsong.mp3\" type=\"audio/ogg\">Your browser sucks</audio>"
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}

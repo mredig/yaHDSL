@@ -1,14 +1,4 @@
 
-public struct Audio: HTMLContainerNode, GlobalAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [AttributeName: AttributeValue] = [:]
-	public var attributesOptions: AttributesOptions?
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
 public struct B: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
@@ -750,16 +740,6 @@ public struct Select: HTMLContainerNode, GlobalAttributable {
 }
 
 public struct Small: HTMLContainerNode, GlobalAttributable {
-	public var childNodes: [any HTMLNode]
-	public var attributes: [AttributeName: AttributeValue] = [:]
-	public var attributesOptions: AttributesOptions?
-
-	public init(childNodes: [any HTMLNode] = []) {
-		self.childNodes = childNodes
-	}
-}
-
-public struct Source: HTMLContainerNode, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
