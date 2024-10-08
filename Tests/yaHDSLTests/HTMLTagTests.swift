@@ -787,6 +787,32 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func sub() async throws {
+		try simpleContainer(tagName: "sub", Sub.self)
+	}
+
+	@Test func summary() async throws {
+		try simpleContainer(tagName: "summary", Summary.self)
+	}
+
+	@Test func sup() async throws {
+		try simpleContainer(tagName: "sup", Sup.self)
+	}
+
+	@Test func table() async throws {
+		let tag = Table {
+			Tr {
+				Td {
+					"fpp"
+				}
+			}
+		}
+
+		let expected = #"<table><tr><td>fpp</td></tr></table>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
