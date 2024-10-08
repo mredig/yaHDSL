@@ -209,7 +209,7 @@ public extension Input {
 		}
 	}
 
-	func withDirname(_ value: String) -> Self {
+	func withDirName(_ value: String) -> Self {
 		setAttribute(named: .dirname, value: value)
 	}
 

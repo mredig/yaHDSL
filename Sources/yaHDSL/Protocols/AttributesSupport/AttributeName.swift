@@ -33,11 +33,14 @@ public extension AttributeName {
 	static let alt = AttributeName(rawValue: "alt")!
 	static let async = AttributeName(rawValue: "async")!
 	static let autocomplete = AttributeName(rawValue: "autocomplete")!
+	static let autocorrect = AttributeName(rawValue: "autocorrect")!
+	static let autofocus = AttributeName(rawValue: "autofocus")!
 	static let autoplay = AttributeName(rawValue: "autoplay")!
 	static let capture = AttributeName(rawValue: "capture")!
 	static let charset = AttributeName(rawValue: "charset")!
 	static let checked = AttributeName(rawValue: "checked")!
 	static let cite = AttributeName(rawValue: "cite")!
+	static let cols = AttributeName(rawValue: "cols")!
 	static let colspan = AttributeName(rawValue: "colspan")!
 	static let content = AttributeName(rawValue: "content")!
 	static let controls = AttributeName(rawValue: "controls")!
@@ -98,9 +101,13 @@ public extension AttributeName {
 	static let rel = AttributeName(rawValue: "rel")!
 	static let required = AttributeName(rawValue: "required")!
 	static let reversed = AttributeName(rawValue: "reversed")!
+	static let rows = AttributeName(rawValue: "rows")!
 	static let rowspan = AttributeName(rawValue: "rowspan")!
 	static let sandbox = AttributeName(rawValue: "sandbox")!
 	static let selected = AttributeName(rawValue: "selected")!
+	static let shadowrootclonable = AttributeName(rawValue: "shadowrootclonable")!
+	static let shadowrootdelegatesfocus = AttributeName(rawValue: "shadowrootdelegatesfocus")!
+	static let shadowrootmode = AttributeName(rawValue: "shadowrootmode")!
 	static let shape = AttributeName(rawValue: "shape")!
 	static let size = AttributeName(rawValue: "size")!
 	static let sizes = AttributeName(rawValue: "sizes")!
@@ -115,5 +122,6 @@ public extension AttributeName {
 	static let usemap = AttributeName(rawValue: "usemap")!
 	static let value = AttributeName(rawValue: "value")!
 	static let width = AttributeName(rawValue: "width")!
+	static let wrap = AttributeName(rawValue: "wrap")!
 	static let xmlns = AttributeName(rawValue: "xmlns")!
 }

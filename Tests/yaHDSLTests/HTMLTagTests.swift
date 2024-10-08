@@ -839,6 +839,20 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func template() async throws {
+		try simpleContainer(tagName: "template", Template.self)
+	}
+
+	@Test func textarea() async throws {
+		let tag = Textarea("foo blar")
+			.withWrap(.hard)
+			.withRows(15)
+
+		let expected = #"<textarea rows="15" wrap="hard">foo blar</textarea>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
