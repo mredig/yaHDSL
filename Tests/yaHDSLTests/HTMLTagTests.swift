@@ -945,6 +945,18 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func u() async throws {
+		try simpleContainer(tagName: "u", U.self)
+	}
+
+	@Test func ul() async throws {
+		try simpleContainer(tagName: "ul", Ul.self)
+	}
+
+	@Test func `var`() async throws {
+		try simpleContainer(tagName: "var", Var.self)
+	}
 }
 
 extension HTMLTagTests {
