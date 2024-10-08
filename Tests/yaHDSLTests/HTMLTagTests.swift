@@ -439,6 +439,37 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func i() async throws {
+		try simpleContainer(tagName: "i", I.self)
+	}
+
+	@Test func iframe() async throws {
+		let tag = Div {
+			Iframe(src: URL(string: "https://redeggproductions.com")!)
+				.withName("home")
+				.withLoading(.eager)
+				.withSandbox([.allowScripts])
+		}
+
+		let expected = """
+			<div>\
+			<iframe loading="eager" name="home" sandbox="allow-scripts" src="https://redeggproductions.com">\
+			</iframe>\
+			</div>
+			"""
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+
+		let prettyExpected = """
+			<div>
+				<iframe loading="eager" name="home" sandbox="allow-scripts" src="https://redeggproductions.com">
+				</iframe>
+			</div>
+			"""
+		let prettyRender = try simpleRender(tag, mode: .pretty(indentation: "\t"))
+		#expect(prettyExpected == prettyRender)
+	}
+
 	@Test func label() async throws {
 		let tagA = Label(forInputID: "firstName", content: "First Name")
 		let tagB = Label(forInputID: "firstName") {
@@ -498,8 +529,11 @@ extension HTMLTagTests {
 
 
 extension HTMLTagTests {
-	private func simpleRender<Component: HTMLNode>(_ component: Component) throws -> String {
-		let context = yaHTMLDocument.Context(mode: .minify, userInfo: [:])
+	private func simpleRender<Component: HTMLNode>(
+		_ component: Component,
+		mode: yaHTMLDocument.Context.Mode = .minify
+	) throws -> String {
+		let context = yaHTMLDocument.Context(mode: mode, userInfo: [:])
 		return try component.render(withContext: context).with {
 			print($0)
 		}

@@ -25,6 +25,8 @@ public extension AttributeName {
 	static let accept = AttributeName(rawValue: "accept")!
 	static let acceptcharset = AttributeName(rawValue: "accept-charset")!
 	static let action = AttributeName(rawValue: "action")!
+	static let allow = AttributeName(rawValue: "allow")!
+	static let allowfullscreen = AttributeName(rawValue: "allowfullscreen")!
 	static let alt = AttributeName(rawValue: "alt")!
 	static let autocomplete = AttributeName(rawValue: "autocomplete")!
 	static let autoplay = AttributeName(rawValue: "autoplay")!
@@ -33,6 +35,7 @@ public extension AttributeName {
 	static let cite = AttributeName(rawValue: "cite")!
 	static let controls = AttributeName(rawValue: "controls")!
 	static let coords = AttributeName(rawValue: "coords")!
+	static let csp = AttributeName(rawValue: "csp")!
 	static let datetime = AttributeName(rawValue: "datetime")!
 	static let dirname = AttributeName(rawValue: "dirname")!
 	static let disabled = AttributeName(rawValue: "disabled")!
@@ -50,6 +53,7 @@ public extension AttributeName {
 	static let hreflang = AttributeName(rawValue: "hreflang")!
 	static let label = AttributeName(rawValue: "label")!
 	static let list = AttributeName(rawValue: "list")!
+	static let loading = AttributeName(rawValue: "loading")!
 	static let loop = AttributeName(rawValue: "loop")!
 	static let max = AttributeName(rawValue: "max")!
 	static let maxlength = AttributeName(rawValue: "maxlength")!
@@ -72,12 +76,14 @@ public extension AttributeName {
 	static let referrerpolicy = AttributeName(rawValue: "referrerpolicy")!
 	static let rel = AttributeName(rawValue: "rel")!
 	static let required = AttributeName(rawValue: "required")!
+	static let sandbox = AttributeName(rawValue: "sandbox")!
 	static let selected = AttributeName(rawValue: "selected")!
 	static let shape = AttributeName(rawValue: "shape")!
 	static let size = AttributeName(rawValue: "size")!
 	static let sizes = AttributeName(rawValue: "sizes")!
 	static let span = AttributeName(rawValue: "span")!
 	static let src = AttributeName(rawValue: "src")!
+	static let srcdoc = AttributeName(rawValue: "srcdoc")!
 	static let srcset = AttributeName(rawValue: "srcset")!
 	static let step = AttributeName(rawValue: "step")!
 	static let target = AttributeName(rawValue: "target")!

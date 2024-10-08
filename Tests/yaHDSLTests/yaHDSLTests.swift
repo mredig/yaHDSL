@@ -43,7 +43,7 @@ import yaHDSL
 
 	let html = HTML {
 		Head {
-			"foooooo"
+			Title("foooooo")
 		}
 		Body {
 			Div {
@@ -82,7 +82,7 @@ import yaHDSL
 		<DOCTYPE html>
 		<html>
 			<head>
-		foooooo
+				<title>foooooo</title>
 			</head>
 			<body>
 				<div>
