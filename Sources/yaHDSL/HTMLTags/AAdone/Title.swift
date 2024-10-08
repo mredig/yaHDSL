@@ -11,9 +11,8 @@ public struct Title: HTMLNode, GlobalAttributable, EventAttributable {
 	}
 
 	public func render(withContext context: yaHTMLDocument.Context) throws -> String {
-		let attributeContent = renderAttributes()
 		let openTag = {
-			if attributeContent.isEmpty == false {
+			if let attributeContent = renderAttributes() {
 				"<title \(attributeContent)>"
 			} else {
 				"<title>"

@@ -4,20 +4,19 @@ public protocol HTMLVoidElement: HTMLNode, GlobalAttributable {
 extension HTMLVoidElement {
 	public func render(withContext context: Context) throws -> Output {
 		guard let tag else { return "" }
-		let attributeContent = renderAttributes()
+		let compiledTag = {
+			if let attributeContent = renderAttributes() {
+				"<\(tag) \(attributeContent)>"
+			} else {
+				"<\(tag)>"
+			}
+		}()
 		switch context.mode {
 		case .minify:
-			if attributeContent.isEmpty {
-				return "<\(tag)>"
-			} else {
-				return "<\(tag) \(attributeContent)>"
-			}
+			return compiledTag
 		case .pretty(indentation: let indentation):
-			if attributeContent.isEmpty {
-				return "\(indentation)<\(tag)>\n"
-			} else {
-				return "\(indentation)<\(tag) \(attributeContent)>\n"
-			}
+			let totalIndentation = String(repeating: indentation, count: context.depth)
+			return "\(totalIndentation)\(compiledTag)"
 		}
 	}
 }

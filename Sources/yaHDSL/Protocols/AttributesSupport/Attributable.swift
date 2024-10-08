@@ -6,7 +6,7 @@ public protocol Attributable: Sendable {
 	func setAttribute(named name: AttributeName, value: AttributeValue) -> Self
 	func removeAttribute(named name: AttributeName) -> Self
 
-	func renderAttributes() -> String
+	func renderAttributes() -> String?
 }
 
 public extension Attributable {
@@ -55,7 +55,8 @@ public extension Attributable {
 		return new
 	}
 
-	func renderAttributes() -> String {
+	func renderAttributes() -> String? {
+		guard attributes.isEmpty == false else { return nil }
 		let options = attributesOptions ?? Self.defaultAttributesOptions
 		let accumulator: [String] = attributes.reduce(into: []) { accum, element in
 			let name = element.key.rawValue
@@ -69,7 +70,11 @@ public extension Attributable {
 				accumulator
 			}
 		}()
-		return accumulated.joined(separator: " ")
+		let final = accumulated.joined(separator: " ")
+		guard final.isEmpty == false else {
+			return nil
+		}
+		return final
 	}
 }
 

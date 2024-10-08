@@ -40,33 +40,38 @@ extension HTMLContentElement {
 			}
 			return out
 		}()
-		let attributeContent = renderAttributes()
-		switch context.mode {
-		case .minify:
-			if let tag {
-				if attributeContent.isEmpty {
-					return "<\(tag)>\(content.joined())</\(tag)>"
+
+		let openingTag = {
+			if let tag = tag {
+				if let attributeContent = renderAttributes() {
+					"<\(tag) \(attributeContent)>"
 				} else {
-					return "<\(tag) \(attributeContent)>\(content.joined())</\(tag)>"
+					"<\(tag)>"
 				}
 			} else {
-				return "\(content.joined())"
+				""
 			}
+		}()
+
+		let closingTag = {
+			guard let tag = tag else { return "" }
+			return "</\(tag)>"
+		}()
+
+		switch context.mode {
+		case .minify:
+			return "\(openingTag)\(content.joined())\(closingTag)"
 		case .pretty(indentation: let baseIndentation):
-			if let tag {
-				let indentation = String(String(repeating: baseIndentation, count: context.depth))
+			if tag != nil {
+				let indentation = String(repeating: baseIndentation, count: context.depth)
 				
 				let output: String = {
 					var builder: [String] = []
-					if attributeContent.isEmpty {
-						builder.append("\(indentation)<\(tag)>")
-					} else {
-						builder.append("\(indentation)<\(tag) \(attributeContent)>")
-					}
+					builder.append("\(indentation)\(openingTag)")
 					if content.isEmpty == false {
 						builder.append("\(content.joined())")
 					}
-					builder.append("\(indentation)</\(tag)>")
+					builder.append("\(indentation)\(closingTag)")
 					return builder.joined(separator: "\n")
 				}()
 				guard context.nextSibling == nil else {
