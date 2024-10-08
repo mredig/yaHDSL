@@ -355,8 +355,16 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
-	@Test func legend() async throws {
-		try simpleContainer(tagName: "legend", Legend.self)
+	@Test func figcaption() async throws {
+		try simpleContainer(tagName: "figcaption", Figcaption.self)
+	}
+
+	@Test func figure() async throws {
+		try simpleContainer(tagName: "figure", Figure.self)
+	}
+
+	@Test func footer() async throws {
+		try simpleContainer(tagName: "footer", Footer.self)
 	}
 
 	@Test func label() async throws {
@@ -371,6 +379,10 @@ struct HTMLTagTests {
 
 		let renderB = try simpleRender(tagB)
 		#expect(expected == renderB)
+	}
+
+	@Test func legend() async throws {
+		try simpleContainer(tagName: "legend", Legend.self)
 	}
 
 	@Test func input() async throws {
@@ -390,20 +402,6 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
-
-	@Test func figcaption() async throws {
-		try simpleContainer(tagName: "figcaption", Figcaption.self)
-	}
-
-	@Test func figure() async throws {
-		try simpleContainer(tagName: "figure", Figure.self)
-	}
-
-	@Test func footer() async throws {
-		try simpleContainer(tagName: "footer", Footer.self)
-	}
-
-
 }
 
 extension HTMLTagTests {
