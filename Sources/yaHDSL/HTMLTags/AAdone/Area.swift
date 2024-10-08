@@ -36,10 +36,6 @@ public extension Area {
 	}
 	#endif
 
-	func withHrefLang(_ langCode: String) -> Self {
-		setAttribute(named: .hreflang, value: langCode)
-	}
-
 	func withMedia(_ mediaQuery: String) -> Self {
 		setAttribute(named: .media, value: mediaQuery)
 	}

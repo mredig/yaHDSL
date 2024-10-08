@@ -51,6 +51,7 @@ public extension AttributeName {
 	static let data = AttributeName(rawValue: "data")!
 	static let datetime = AttributeName(rawValue: "datetime")!
 	static let decoding = AttributeName(rawValue: "decoding")!
+	static let `default` = AttributeName(rawValue: "default")!
 	static let dirname = AttributeName(rawValue: "dirname")!
 	static let disabled = AttributeName(rawValue: "disabled")!
 	static let download = AttributeName(rawValue: "download")!
@@ -72,6 +73,7 @@ public extension AttributeName {
 	static let imagesrcset = AttributeName(rawValue: "imagesrcset")!
 	static let integrity = AttributeName(rawValue: "integrity")!
 	static let ismap = AttributeName(rawValue: "ismap")!
+	static let kind = AttributeName(rawValue: "kind")!
 	static let label = AttributeName(rawValue: "label")!
 	static let list = AttributeName(rawValue: "list")!
 	static let loading = AttributeName(rawValue: "loading")!
@@ -116,6 +118,7 @@ public extension AttributeName {
 	static let span = AttributeName(rawValue: "span")!
 	static let src = AttributeName(rawValue: "src")!
 	static let srcdoc = AttributeName(rawValue: "srcdoc")!
+	static let srclang = AttributeName(rawValue: "srclang")!
 	static let srcset = AttributeName(rawValue: "srcset")!
 	static let start = AttributeName(rawValue: "start")!
 	static let step = AttributeName(rawValue: "step")!

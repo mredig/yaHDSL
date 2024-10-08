@@ -923,6 +923,28 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func tr() async throws {
+		let tag = Tr {
+			Th { "head" }
+			Td { "box" }
+		}
+
+		let expected = #"<tr><th>head</th><td>box</td></tr>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func track() async throws {
+		let tag = Track()
+			.withDefault(true)
+			.withSrcLang("en")
+			.withSrc("/video/foo.vtt")
+
+		let expected = #"<track default src="/video/foo.vtt" srclang="en">"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 extension HTMLTagTests {

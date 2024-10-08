@@ -98,6 +98,7 @@ public extension Link {
 	}
 	#endif
 
+	/// [Code info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#hreflang)
 	func withHrefLang(_ langCode: String) -> Self {
 		setAttribute(named: .hreflang, value: langCode)
 	}
