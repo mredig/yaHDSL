@@ -334,6 +334,62 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func fieldset() async throws {
+		let tag = Fieldset {
+			Legend { "title" }
+			Div {
+				Label(forInputID: "name", content: "name")
+				Input(inputType: .text)
+					.setID("name")
+					.withPlaceholder("Bob Doe")
+			}
+		}
+			.withDisabled(true)
+
+		let expected = """
+			<fieldset disabled><legend>title</legend><div><label for="name">name</label><input id="name" \
+			placeholder="Bob Doe" type="text"></div></fieldset>
+			"""
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func legend() async throws {
+		try simpleContainer(tagName: "legend", Legend.self)
+	}
+
+	@Test func label() async throws {
+		let tagA = Label(forInputID: "firstName", content: "First Name")
+		let tagB = Label(forInputID: "firstName") {
+			"First Name"
+		}
+
+		let expected = "<label for=\"firstName\">First Name</label>"
+		let renderA = try simpleRender(tagA)
+		#expect(expected == renderA)
+
+		let renderB = try simpleRender(tagB)
+		#expect(expected == renderB)
+	}
+
+	@Test func input() async throws {
+		let tag = Form {
+			Input(inputType: .text)
+				.withName("firstname")
+			Input(inputType: .text)
+				.withName("lastname")
+			Input(inputType: .tel)
+				.withName("number")
+		}
+
+		let expected = """
+			<form><input name="firstname" type="text"><input name="lastname" type="text">\
+			<input name="number" type="tel"></form>
+			"""
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 extension HTMLTagTests {

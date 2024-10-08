@@ -61,4 +61,22 @@ public extension AttributeName {
 	static let selected = AttributeName(rawValue: "selected")!
 	static let datetime = AttributeName(rawValue: "datetime")!
 	static let open = AttributeName(rawValue: "open")!
+	static let `for` = AttributeName(rawValue: "for")!
+	static let accept = AttributeName(rawValue: "accept")!
+	static let autocomplete = AttributeName(rawValue: "autocomplete")!
+	static let capture = AttributeName(rawValue: "capture")!
+	static let checked = AttributeName(rawValue: "checked")!
+	static let dirname = AttributeName(rawValue: "dirname")!
+	static let list = AttributeName(rawValue: "list")!
+	static let max = AttributeName(rawValue: "max")!
+	static let maxlength = AttributeName(rawValue: "maxlength")!
+	static let min = AttributeName(rawValue: "min")!
+	static let minlength = AttributeName(rawValue: "minlength")!
+	static let multiple = AttributeName(rawValue: "multiple")!
+	static let pattern = AttributeName(rawValue: "pattern")!
+	static let placeholder = AttributeName(rawValue: "placeholder")!
+	static let readonly = AttributeName(rawValue: "readonly")!
+	static let required = AttributeName(rawValue: "required")!
+	static let size = AttributeName(rawValue: "size")!
+	static let step = AttributeName(rawValue: "step")!
 }

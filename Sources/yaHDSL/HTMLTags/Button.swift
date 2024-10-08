@@ -33,17 +33,7 @@ public extension Button {
 		setAttribute(named: .formenctype, value: mimeEncodeType)
 	}
 
-	struct FormMethod: RawRepresentable, Sendable, Hashable {
-		public let rawValue: String
-
-		public init(rawValue: String) {
-			self.rawValue = rawValue
-		}
-
-		public static let post = FormMethod(rawValue: "post")
-		public static let get = FormMethod(rawValue: "get")
-		public static let dialog = FormMethod(rawValue: "dialog")
-	}
+	typealias FormMethod = Input.FormMethod
 	func withFormMethod(_ method: FormMethod) -> Self {
 		setAttribute(named: .formmethod, value: method)
 	}
@@ -65,17 +55,7 @@ public extension Button {
 		setAttribute(named: .name, value: value)
 	}
 
-	struct PopoverTargetAction: RawRepresentable, Sendable, Hashable {
-		public let rawValue: String
-
-		public init(rawValue: String) {
-			self.rawValue = rawValue
-		}
-
-		public static let hide = PopoverTargetAction(rawValue: "hide")
-		public static let show = PopoverTargetAction(rawValue: "show")
-		public static let toggle = PopoverTargetAction(rawValue: "toggle")
-	}
+	typealias PopoverTargetAction = Input.PopoverTargetAction
 	func withPopoverTargetAction(_ action: PopoverTargetAction) -> Self {
 		setAttribute(named: .popovertargetaction, value: action)
 	}

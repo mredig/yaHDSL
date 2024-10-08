@@ -20,7 +20,7 @@ let package = Package(
 				.copy("Resources")
 			]
 		),
-        .testTarget(
+		.testTarget(
             name: "yaHDSLTests",
             dependencies: ["yaHDSL"]
         ),

@@ -5,6 +5,10 @@ public extension GlobalAttributable {
 		setAttribute(named: .accessKey, value: "\(key)")
 	}
 
+	func setAutoCapitalize(_ mode: AutoCapitalizeMode) -> Self {
+		setAttribute(named: .autocapitalize, value: mode)
+	}
+
 	func setAutofocus(_ flag: Bool) -> Self {
 		if flag {
 			setAttributeFlag(named: .autoFocus)
@@ -99,6 +103,20 @@ public extension GlobalAttributable {
 	}
 }
 
+public struct AutoCapitalizeMode: RawRepresentable, Sendable, Hashable {
+	public let rawValue: String
+	public init(rawValue: String) {
+		self.rawValue = rawValue
+	}
+
+	public static let off = AutoCapitalizeMode(rawValue: "off")
+	public static let on = AutoCapitalizeMode(rawValue: "on")
+	public static let words = AutoCapitalizeMode(rawValue: "words")
+	public static let characters = AutoCapitalizeMode(rawValue: "characters")
+	public static let sentences = AutoCapitalizeMode.on
+	public static let none = AutoCapitalizeMode.off
+}
+
 public struct TextDirection: RawRepresentable, Sendable, Hashable {
 	public var rawValue: String
 	public init(rawValue: String) {
@@ -143,6 +161,7 @@ public struct KeyboardInputMode: RawRepresentable, Sendable, Hashable {
 
 public extension AttributeName {
 	static let accessKey = AttributeName(rawValue: "accesskey")!
+	static let autocapitalize = AttributeName(rawValue: "autocapitalize")!
 	static let autoFocus = AttributeName(rawValue: "autofocus")!
 	static let `class` = AttributeName(rawValue: "class")!
 	static let contentEditable = AttributeName(rawValue: "contenteditable")!
