@@ -8,7 +8,6 @@ import CryptoKit
 #endif
 
 public struct Script: HTMLTextContainer, GlobalAttributable, EventAttributable {
-	public var tag: String? { "script" }
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
 

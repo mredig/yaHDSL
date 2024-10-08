@@ -1,5 +1,4 @@
 public struct Style: HTMLTextContainer, GlobalAttributable, EventAttributable {
-	public var tag: String? { "style" }
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
 

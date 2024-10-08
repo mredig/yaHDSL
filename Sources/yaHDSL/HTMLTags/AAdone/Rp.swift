@@ -1,5 +1,4 @@
 public struct Rp: HTMLTextContainer, EventAttributable {
-	public var tag: String? { "rp" }
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
 
