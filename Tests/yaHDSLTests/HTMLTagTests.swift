@@ -756,6 +756,28 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func slot() async throws {
+		let tag = Slot {
+			"content"
+		}.withName("foo")
+
+		let expected = #"<slot name="foo">content</slot>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func small() async throws {
+		try simpleContainer(tagName: "small", Small.self)
+	}
+
+	@Test func span() async throws {
+		try simpleContainer(tagName: "span", Span.self)
+	}
+
+	@Test func strong() async throws {
+		try simpleContainer(tagName: "strong", Strong.self)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
