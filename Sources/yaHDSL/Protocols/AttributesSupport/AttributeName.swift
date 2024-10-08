@@ -22,6 +22,8 @@ public struct AttributeName: RawRepresentable, Sendable, Hashable {
 }
 
 public extension AttributeName {
+	static let `as` = AttributeName(rawValue: "as")!
+	static let `for` = AttributeName(rawValue: "for")!
 	static let accept = AttributeName(rawValue: "accept")!
 	static let acceptcharset = AttributeName(rawValue: "accept-charset")!
 	static let action = AttributeName(rawValue: "action")!
@@ -44,7 +46,6 @@ public extension AttributeName {
 	static let download = AttributeName(rawValue: "download")!
 	static let enctype = AttributeName(rawValue: "enctype")!
 	static let fetchpriority = AttributeName(rawValue: "fetchpriority")!
-	static let `for` = AttributeName(rawValue: "for")!
 	static let form = AttributeName(rawValue: "form")!
 	static let formaction = AttributeName(rawValue: "formaction")!
 	static let formenctype = AttributeName(rawValue: "formenctype")!
@@ -54,6 +55,9 @@ public extension AttributeName {
 	static let height = AttributeName(rawValue: "height")!
 	static let href = AttributeName(rawValue: "href")!
 	static let hreflang = AttributeName(rawValue: "hreflang")!
+	static let imagesizes = AttributeName(rawValue: "imagesizes")!
+	static let imagesrcset = AttributeName(rawValue: "imagesrcset")!
+	static let integrity = AttributeName(rawValue: "integrity")!
 	static let ismap = AttributeName(rawValue: "ismap")!
 	static let label = AttributeName(rawValue: "label")!
 	static let list = AttributeName(rawValue: "list")!

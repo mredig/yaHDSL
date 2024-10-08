@@ -496,6 +496,14 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func ins() async throws {
+		try simpleContainer(tagName: "ins", Ins.self)
+	}
+
+	@Test func kbd() async throws {
+		try simpleContainer(tagName: "kbd", Kbd.self)
+	}
+
 	@Test func label() async throws {
 		let tagA = Label(forInputID: "firstName", content: "First Name")
 		let tagB = Label(forInputID: "firstName") {
@@ -510,12 +518,34 @@ struct HTMLTagTests {
 		#expect(expected == renderB)
 	}
 
-	@Test func ins() async throws {
-		try simpleContainer(tagName: "ins", Ins.self)
+	@Test func li() async throws {
+		let tag = Ul {
+			Li { "foo" }.withValue(0)
+			Li { "bar" }.withValue(1)
+		}
+
+		let expected = "<ul><li value=\"0\">foo</li><li value=\"1\">bar</li></ul>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
 	}
 
 	@Test func legend() async throws {
 		try simpleContainer(tagName: "legend", Legend.self)
+	}
+
+	@Test func link() async throws {
+		let styles = Link(href: "/assets/css/styles.css")
+			.withRel(.Link.stylesheet)
+
+		let icon = Link(href: "/images/favicon.ico", rel: .Link.icon)
+
+		let sylesExpected = "<link href=\"/assets/css/styles.css\" rel=\"stylesheet\">"
+		let stylesRender = try simpleRender(styles)
+		#expect(sylesExpected == stylesRender)
+
+		let iconExpected = "<link href=\"/images/favicon.ico\" rel=\"icon\">"
+		let iconRender = try simpleRender(icon)
+		#expect(iconExpected == iconRender)
 	}
 
 

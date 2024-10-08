@@ -7,3 +7,9 @@ public struct Li: HTMLContentElement, GlobalAttributable, EventAttributable {
 		self.childNodes = childNodes
 	}
 }
+
+public extension Li {
+	func withValue(_ value: Int) -> Self {
+		setAttribute(named: .value, value: value)
+	}
+}
