@@ -84,4 +84,5 @@ public extension AttributeName {
 	static let method = AttributeName(rawValue: "method")!
 	static let novalidate = AttributeName(rawValue: "novalidate")!
 	static let acceptcharset = AttributeName(rawValue: "accept-charset")!
+	static let xmlns = AttributeName(rawValue: "xmlns")!
 }

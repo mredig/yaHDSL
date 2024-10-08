@@ -423,6 +423,22 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func header() async throws {
+		try simpleContainer(tagName: "header", Header.self)
+	}
+
+	@Test func hgroup() async throws {
+		try simpleContainer(tagName: "hgroup", Hgroup.self)
+	}
+
+	@Test func hr() async throws {
+		let tag = Hr()
+
+		let expected = "<hr>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func label() async throws {
 		let tagA = Label(forInputID: "firstName", content: "First Name")
 		let tagB = Label(forInputID: "firstName") {
