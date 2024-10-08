@@ -7,3 +7,9 @@ public struct Map: HTMLContentElement, GlobalAttributable, EventAttributable {
 		self.childNodes = childNodes
 	}
 }
+
+public extension Map {
+	func withName(_ name: String) -> Self {
+		setAttribute(named: .name, value: name)
+	}
+}

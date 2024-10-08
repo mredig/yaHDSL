@@ -548,6 +548,21 @@ struct HTMLTagTests {
 		#expect(iconExpected == iconRender)
 	}
 
+	@Test func main() async throws {
+		try simpleContainer(tagName: "main", Main.self)
+	}
+
+	@Test func map() async throws {
+		try simpleContainer(tagName: "map", Map.self)
+	}
+
+	@Test func mark() async throws {
+		try simpleContainer(tagName: "mark", Mark.self)
+	}
+
+	@Test func menu() async throws {
+		try simpleContainer(tagName: "menu", Menu.self)
+	}
 
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
