@@ -690,6 +690,14 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func rp() async throws {
+		let tag = Rp("asdf")
+
+		let expected = #"<rp>asdf</rp>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
