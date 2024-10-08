@@ -583,6 +583,19 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func meter() async throws {
+		let tag = Meter {
+			"80%"
+		}
+			.withValue(80)
+			.withMax(100)
+			.withMin(0)
+
+		let expected = "<meter max=\"100\" min=\"0\" value=\"80\">80%</meter>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 

@@ -55,6 +55,7 @@ public extension AttributeName {
 	static let formnovalidate = AttributeName(rawValue: "formnovalidate")!
 	static let formtarget = AttributeName(rawValue: "formtarget")!
 	static let height = AttributeName(rawValue: "height")!
+	static let high = AttributeName(rawValue: "high")!
 	static let href = AttributeName(rawValue: "href")!
 	static let hreflang = AttributeName(rawValue: "hreflang")!
 	static let httpequiv = AttributeName(rawValue: "http-equiv")!
@@ -66,6 +67,7 @@ public extension AttributeName {
 	static let list = AttributeName(rawValue: "list")!
 	static let loading = AttributeName(rawValue: "loading")!
 	static let loop = AttributeName(rawValue: "loop")!
+	static let low = AttributeName(rawValue: "low")!
 	static let max = AttributeName(rawValue: "max")!
 	static let maxlength = AttributeName(rawValue: "maxlength")!
 	static let media = AttributeName(rawValue: "media")!
@@ -77,6 +79,7 @@ public extension AttributeName {
 	static let name = AttributeName(rawValue: "name")!
 	static let novalidate = AttributeName(rawValue: "novalidate")!
 	static let open = AttributeName(rawValue: "open")!
+	static let optimum = AttributeName(rawValue: "optimum")!
 	static let pattern = AttributeName(rawValue: "pattern")!
 	static let ping = AttributeName(rawValue: "ping")!
 	static let placeholder = AttributeName(rawValue: "placeholder")!
