@@ -347,9 +347,14 @@ struct HTMLTagTests {
 			.withDisabled(true)
 
 		let expected = """
-   <fieldset disabled><legend>title</legend><div><label for="name">name</label><input id="name" \
-   placeholder="Bob Doe" type="text"></div></fieldset>
-   """
+			<fieldset disabled>\
+			<legend>title</legend>\
+			<div>\
+			<label for="name">name</label>\
+			<input id="name" name="name" placeholder="Bob Doe" type="text">\
+			</div>\
+			</fieldset>
+			"""
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
@@ -375,11 +380,11 @@ struct HTMLTagTests {
 		}
 
 		let expected = """
-			<form action="/api/v1/create" encType="multipart/form-data" method="post>\
+			<form action="/api/v1/create" enctype="multipart/form-data" method="post">\
 			<label for="firstname">First Name: </label>\
-			<input name="firstname" id="firstname" type="text">\
+			<input id="firstname" name="firstname" type="text">\
 			<label for="lastname">Last Name: </label>\
-			<input name="lastname" id="asdf" type="text">\
+			<input id="asdf" name="lastname" type="text">\
 			</form>
 			"""
 		let render = try simpleRender(tag)
@@ -410,6 +415,14 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func head() async throws {
+		let tag = Head(title: "yaHDSL")
+
+		let expected = "<head><title>yaHDSL</title></head>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func label() async throws {
 		let tagA = Label(forInputID: "firstName", content: "First Name")
 		let tagB = Label(forInputID: "firstName") {
@@ -437,11 +450,19 @@ struct HTMLTagTests {
 
 		let expected = """
 			<form>\
-			<input name="firstname" id="firstname" type="text">\
-			<input name="lastname" id="lastname" type="text">\
-			<input name="number" id="number" type="tel">\
+			<input id="firstname" name="firstname" type="text">\
+			<input id="lastname" name="lastname" type="text">\
+			<input id="number" name="number" type="tel">\
 			</form>
 			"""
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func title() async throws {
+		let tag = Title("Great Scott")
+
+		let expected = "<title>Great Scott</title>"
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
