@@ -386,6 +386,30 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func h123456() async throws {
+		let div = Div {
+			H1(text: "one")
+			H2(text: "two")
+			H3(text: "three")
+			H4(text: "four")
+			H5(text: "five")
+			H6(text: "six")
+		}
+
+		let expected = """
+			<div>\
+			<h1>one</h1>\
+			<h2>two</h2>\
+			<h3>three</h3>\
+			<h4>four</h4>\
+			<h5>five</h5>\
+			<h6>six</h6>\
+			</div>
+			"""
+		let render = try simpleRender(div)
+		#expect(expected == render)
+	}
+
 	@Test func label() async throws {
 		let tagA = Label(forInputID: "firstName", content: "First Name")
 		let tagB = Label(forInputID: "firstName") {
