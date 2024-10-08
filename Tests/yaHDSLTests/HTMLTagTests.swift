@@ -738,6 +738,24 @@ struct HTMLTagTests {
 		try simpleContainer(tagName: "section", Section.self)
 	}
 
+	@Test func select() async throws {
+		let tag = Select {
+			Option { "A" }.withValue("a")
+			Option { "B" }.withValue("b").withSelected(true)
+		}
+			.withName("alpha")
+			.withMultiple(true)
+
+		let expected = """
+			<select multiple name="alpha">\
+			<option value="a">A</option>\
+			<option selected value="b">B</option>\
+			</select>
+			"""
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
