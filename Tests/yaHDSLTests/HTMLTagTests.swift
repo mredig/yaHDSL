@@ -714,6 +714,22 @@ struct HTMLTagTests {
 		try simpleContainer(tagName: "samp", Samp.self)
 	}
 
+	@Test func script() async throws {
+		let tag = Script(src: "/assets/js/foo.js")
+
+		let expected = #"<script src="/assets/js/foo.js"></script>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func script2() async throws {
+		let tag = Script(#"console.log("hello world")"#)
+
+		let expected = #"<script>console.log("hello world")</script>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 

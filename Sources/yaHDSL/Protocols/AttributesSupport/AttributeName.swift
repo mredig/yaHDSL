@@ -23,6 +23,7 @@ public struct AttributeName: RawRepresentable, Sendable, Hashable {
 
 public extension AttributeName {
 	static let `as` = AttributeName(rawValue: "as")!
+	static let `defer` = AttributeName(rawValue: "defer")!
 	static let `for` = AttributeName(rawValue: "for")!
 	static let accept = AttributeName(rawValue: "accept")!
 	static let acceptcharset = AttributeName(rawValue: "accept-charset")!
@@ -30,6 +31,7 @@ public extension AttributeName {
 	static let allow = AttributeName(rawValue: "allow")!
 	static let allowfullscreen = AttributeName(rawValue: "allowfullscreen")!
 	static let alt = AttributeName(rawValue: "alt")!
+	static let async = AttributeName(rawValue: "async")!
 	static let autocomplete = AttributeName(rawValue: "autocomplete")!
 	static let autoplay = AttributeName(rawValue: "autoplay")!
 	static let capture = AttributeName(rawValue: "capture")!
@@ -78,6 +80,8 @@ public extension AttributeName {
 	static let multiple = AttributeName(rawValue: "multiple")!
 	static let muted = AttributeName(rawValue: "muted")!
 	static let name = AttributeName(rawValue: "name")!
+	static let nomodule = AttributeName(rawValue: "nomodule")!
+	static let nonce = AttributeName(rawValue: "nonce")!
 	static let novalidate = AttributeName(rawValue: "novalidate")!
 	static let open = AttributeName(rawValue: "open")!
 	static let optimum = AttributeName(rawValue: "optimum")!
