@@ -33,8 +33,10 @@ public extension AttributeName {
 	static let autocomplete = AttributeName(rawValue: "autocomplete")!
 	static let autoplay = AttributeName(rawValue: "autoplay")!
 	static let capture = AttributeName(rawValue: "capture")!
+	static let charset = AttributeName(rawValue: "charset")!
 	static let checked = AttributeName(rawValue: "checked")!
 	static let cite = AttributeName(rawValue: "cite")!
+	static let content = AttributeName(rawValue: "content")!
 	static let controls = AttributeName(rawValue: "controls")!
 	static let coords = AttributeName(rawValue: "coords")!
 	static let crossorigin = AttributeName(rawValue: "crossorigin")!
@@ -55,6 +57,7 @@ public extension AttributeName {
 	static let height = AttributeName(rawValue: "height")!
 	static let href = AttributeName(rawValue: "href")!
 	static let hreflang = AttributeName(rawValue: "hreflang")!
+	static let httpequiv = AttributeName(rawValue: "http-equiv")!
 	static let imagesizes = AttributeName(rawValue: "imagesizes")!
 	static let imagesrcset = AttributeName(rawValue: "imagesrcset")!
 	static let integrity = AttributeName(rawValue: "integrity")!

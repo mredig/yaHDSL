@@ -564,6 +564,25 @@ struct HTMLTagTests {
 		try simpleContainer(tagName: "menu", Menu.self)
 	}
 
+	@Test func meta() async throws {
+		let tag = Meta()
+			.withCharset("utf-8")
+
+		let expected = "<meta charset=\"utf-8\">"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func meta2() async throws {
+		let tag = Meta()
+			.withHttpEquiv(.refresh)
+			.withContent("15;url=https://foo.bar")
+
+		let expected = "<meta content=\"15;url=https://foo.bar\" http-equiv=\"refresh\">"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
