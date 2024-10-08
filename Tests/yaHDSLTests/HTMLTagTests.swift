@@ -654,6 +654,14 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func p() async throws {
+		try simpleContainer(tagName: "p", P.self)
+	}
+
+	@Test func picture() async throws {
+		try simpleContainer(tagName: "picture", Picture.self)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
