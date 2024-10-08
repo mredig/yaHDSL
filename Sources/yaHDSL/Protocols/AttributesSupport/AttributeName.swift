@@ -25,6 +25,7 @@ public extension AttributeName {
 	static let `as` = AttributeName(rawValue: "as")!
 	static let `defer` = AttributeName(rawValue: "defer")!
 	static let `for` = AttributeName(rawValue: "for")!
+	static let abbr = AttributeName(rawValue: "abbr")!
 	static let accept = AttributeName(rawValue: "accept")!
 	static let acceptcharset = AttributeName(rawValue: "accept-charset")!
 	static let action = AttributeName(rawValue: "action")!
@@ -104,6 +105,7 @@ public extension AttributeName {
 	static let rows = AttributeName(rawValue: "rows")!
 	static let rowspan = AttributeName(rawValue: "rowspan")!
 	static let sandbox = AttributeName(rawValue: "sandbox")!
+	static let scope = AttributeName(rawValue: "scope")!
 	static let selected = AttributeName(rawValue: "selected")!
 	static let shadowrootclonable = AttributeName(rawValue: "shadowrootclonable")!
 	static let shadowrootdelegatesfocus = AttributeName(rawValue: "shadowrootdelegatesfocus")!
