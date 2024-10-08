@@ -470,22 +470,12 @@ struct HTMLTagTests {
 		#expect(prettyExpected == prettyRender)
 	}
 
-	@Test func label() async throws {
-		let tagA = Label(forInputID: "firstName", content: "First Name")
-		let tagB = Label(forInputID: "firstName") {
-			"First Name"
-		}
+	@Test func img() async throws {
+		let tag = Img(src: "/foo/bar", alt: "fubar")
 
-		let expected = "<label for=\"firstName\">First Name</label>"
-		let renderA = try simpleRender(tagA)
-		#expect(expected == renderA)
-
-		let renderB = try simpleRender(tagB)
-		#expect(expected == renderB)
-	}
-
-	@Test func legend() async throws {
-		try simpleContainer(tagName: "legend", Legend.self)
+		let expected = "<img alt=\"fubar\" src=\"/foo/bar\">"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
 	}
 
 	@Test func input() async throws {
@@ -505,6 +495,29 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func label() async throws {
+		let tagA = Label(forInputID: "firstName", content: "First Name")
+		let tagB = Label(forInputID: "firstName") {
+			"First Name"
+		}
+
+		let expected = "<label for=\"firstName\">First Name</label>"
+		let renderA = try simpleRender(tagA)
+		#expect(expected == renderA)
+
+		let renderB = try simpleRender(tagB)
+		#expect(expected == renderB)
+	}
+
+	@Test func ins() async throws {
+		try simpleContainer(tagName: "ins", Ins.self)
+	}
+
+	@Test func legend() async throws {
+		try simpleContainer(tagName: "legend", Legend.self)
+	}
+
 
 	@Test func title() async throws {
 		let tag = Title("Great Scott")

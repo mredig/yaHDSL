@@ -35,12 +35,15 @@ public extension AttributeName {
 	static let cite = AttributeName(rawValue: "cite")!
 	static let controls = AttributeName(rawValue: "controls")!
 	static let coords = AttributeName(rawValue: "coords")!
+	static let crossorigin = AttributeName(rawValue: "crossorigin")!
 	static let csp = AttributeName(rawValue: "csp")!
 	static let datetime = AttributeName(rawValue: "datetime")!
+	static let decoding = AttributeName(rawValue: "decoding")!
 	static let dirname = AttributeName(rawValue: "dirname")!
 	static let disabled = AttributeName(rawValue: "disabled")!
 	static let download = AttributeName(rawValue: "download")!
 	static let enctype = AttributeName(rawValue: "enctype")!
+	static let fetchpriority = AttributeName(rawValue: "fetchpriority")!
 	static let `for` = AttributeName(rawValue: "for")!
 	static let form = AttributeName(rawValue: "form")!
 	static let formaction = AttributeName(rawValue: "formaction")!
@@ -51,6 +54,7 @@ public extension AttributeName {
 	static let height = AttributeName(rawValue: "height")!
 	static let href = AttributeName(rawValue: "href")!
 	static let hreflang = AttributeName(rawValue: "hreflang")!
+	static let ismap = AttributeName(rawValue: "ismap")!
 	static let label = AttributeName(rawValue: "label")!
 	static let list = AttributeName(rawValue: "list")!
 	static let loading = AttributeName(rawValue: "loading")!
@@ -88,6 +92,7 @@ public extension AttributeName {
 	static let step = AttributeName(rawValue: "step")!
 	static let target = AttributeName(rawValue: "target")!
 	static let type = AttributeName(rawValue: "type")!
+	static let usemap = AttributeName(rawValue: "usemap")!
 	static let value = AttributeName(rawValue: "value")!
 	static let width = AttributeName(rawValue: "width")!
 	static let xmlns = AttributeName(rawValue: "xmlns")!
