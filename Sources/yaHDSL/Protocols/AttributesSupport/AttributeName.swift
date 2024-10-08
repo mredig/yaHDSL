@@ -38,6 +38,7 @@ public extension AttributeName {
 	static let charset = AttributeName(rawValue: "charset")!
 	static let checked = AttributeName(rawValue: "checked")!
 	static let cite = AttributeName(rawValue: "cite")!
+	static let colspan = AttributeName(rawValue: "colspan")!
 	static let content = AttributeName(rawValue: "content")!
 	static let controls = AttributeName(rawValue: "controls")!
 	static let coords = AttributeName(rawValue: "coords")!
@@ -57,6 +58,7 @@ public extension AttributeName {
 	static let formmethod = AttributeName(rawValue: "formmethod")!
 	static let formnovalidate = AttributeName(rawValue: "formnovalidate")!
 	static let formtarget = AttributeName(rawValue: "formtarget")!
+	static let headers = AttributeName(rawValue: "headers")!
 	static let height = AttributeName(rawValue: "height")!
 	static let high = AttributeName(rawValue: "high")!
 	static let href = AttributeName(rawValue: "href")!
@@ -96,6 +98,7 @@ public extension AttributeName {
 	static let rel = AttributeName(rawValue: "rel")!
 	static let required = AttributeName(rawValue: "required")!
 	static let reversed = AttributeName(rawValue: "reversed")!
+	static let rowspan = AttributeName(rawValue: "rowspan")!
 	static let sandbox = AttributeName(rawValue: "sandbox")!
 	static let selected = AttributeName(rawValue: "selected")!
 	static let shape = AttributeName(rawValue: "shape")!

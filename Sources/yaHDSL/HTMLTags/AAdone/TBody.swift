@@ -1,4 +1,4 @@
-public struct Td: HTMLContentElement, GlobalAttributable, EventAttributable {
+public struct TBody: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

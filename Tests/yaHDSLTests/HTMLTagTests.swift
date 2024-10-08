@@ -813,6 +813,32 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func tbody() async throws {
+		let tag = TBody {
+			Tr {
+				Td {
+					"fpp"
+				}
+			}
+		}
+
+		let expected = #"<tbody><tr><td>fpp</td></tr></tbody>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func td() async throws {
+		let tag = Td {
+			"foo"
+		}
+			.withColSpan(2)
+			.withRowSpan(3)
+
+		let expected = #"<td colspan="2" rowspan="3">foo</td>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
