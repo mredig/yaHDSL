@@ -21,10 +21,13 @@ public extension Ins {
 	func withCitation(_ url: URL) -> Self {
 		setAttribute(named: .cite, value: url.absoluteString)
 	}
+
+	func withDatetime(_ timestamp: Date) -> Self {
+		withDatetime(ISO8601DateFormatter.internetTime.string(from: timestamp))
+	}
 	#endif
 
-	nonisolated(unsafe) package static let dateFormatter = Del.dateFormatter
-	func withDateTime(_ timestamp: Date) -> Self {
-		setAttribute(named: .datetime, value: Self.dateFormatter.string(from: timestamp))
+	func withDatetime(_ value: String) -> Self {
+		setAttribute(named: .datetime, value: value)
 	}
 }

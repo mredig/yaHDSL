@@ -873,6 +873,49 @@ struct HTMLTagTests {
 		try simpleContainer(tagName: "thead", THead.self)
 	}
 
+	@Test func time() async throws {
+		let date = DateComponents(
+			calendar: .autoupdatingCurrent,
+			timeZone: .gmt,
+			year: 2024,
+			month: 10,
+			day: 8,
+			hour: 16,
+			minute: 32,
+			second: 15)
+			.date!
+
+		let tag = Time(timestamp: date)
+
+		let expected = #"<time datetime="2024-10-08T16:32:15Z">2024-10-08T16:32:15Z</time>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func time2() async throws {
+		let date = DateComponents(
+			calendar: .autoupdatingCurrent,
+			timeZone: .gmt,
+			year: 2024,
+			month: 10,
+			day: 8,
+			hour: 16,
+			minute: 32,
+			second: 15)
+			.date!
+
+		let formatter = DateFormatter()
+		formatter.timeZone = .gmt
+		formatter.dateStyle = .short
+		formatter.timeStyle = .short
+		formatter.formattingContext = .standalone
+		let tag = Time(timestamp: date, formatter: formatter)
+
+		let expected = #"<time datetime="2024-10-08T16:32:15Z">10/8/24, 4:32 PM</time>"# // contains U+0x202f - nbsp
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
