@@ -79,4 +79,9 @@ public extension AttributeName {
 	static let required = AttributeName(rawValue: "required")!
 	static let size = AttributeName(rawValue: "size")!
 	static let step = AttributeName(rawValue: "step")!
+	static let action = AttributeName(rawValue: "action")!
+	static let enctype = AttributeName(rawValue: "enctype")!
+	static let method = AttributeName(rawValue: "method")!
+	static let novalidate = AttributeName(rawValue: "novalidate")!
+	static let acceptcharset = AttributeName(rawValue: "accept-charset")!
 }

@@ -9,10 +9,39 @@ public struct Input: HTMLVoidElement, GlobalAttributable, EventAttributable {
 
 	public init() {}
 
-	public init(inputType: InputType, attributes: [AttributeName: AttributeValue] = [:], attributesOptions: AttributesOptions? = nil) {
+	public init(
+		inputType: InputType,
+		nameAndID: String,
+		placeholder: String? = nil,
+		attributes: [AttributeName: AttributeValue] = [:],
+		attributesOptions: AttributesOptions? = nil
+	) {
+		self.init(
+			inputType: inputType,
+			name: nameAndID,
+			id: nameAndID,
+			placeholder: placeholder,
+			attributes: attributes,
+			attributesOptions: attributesOptions)
+	}
+
+	public init(
+		inputType: InputType,
+		name: String,
+		id: String,
+		placeholder: String? = nil,
+		attributes: [AttributeName: AttributeValue] = [:],
+		attributesOptions: AttributesOptions? = nil
+	) {
 		self.init(attributes: attributes, attributesOptions: attributesOptions)
 		self = withType(inputType)
+			.withName(name)
+			.setID(id)
+
+		guard let placeholder else { return }
+		self = withPlaceholder(placeholder)
 	}
+
 
 	public init(attributes: [AttributeName : AttributeValue], attributesOptions: AttributesOptions? = nil) {
 		self.attributes = attributes
@@ -210,17 +239,7 @@ public extension Input {
 	}
 	#endif
 	
-	struct FormMethod: RawRepresentable, Sendable, Hashable {
-		public let rawValue: String
-
-		public init(rawValue: String) {
-			self.rawValue = rawValue
-		}
-
-		public static let post = FormMethod(rawValue: "post")
-		public static let get = FormMethod(rawValue: "get")
-		public static let dialog = FormMethod(rawValue: "dialog")
-	}
+	typealias FormMethod = Form.Method
 	func withFormMethod(_ method: FormMethod) -> Self {
 		setAttribute(named: .formmethod, value: method)
 	}

@@ -33,7 +33,7 @@ public extension Button {
 		setAttribute(named: .formenctype, value: mimeEncodeType)
 	}
 
-	typealias FormMethod = Input.FormMethod
+	typealias FormMethod = Form.Method
 	func withFormMethod(_ method: FormMethod) -> Self {
 		setAttribute(named: .formmethod, value: method)
 	}

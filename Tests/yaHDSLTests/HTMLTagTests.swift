@@ -340,8 +340,7 @@ struct HTMLTagTests {
 			Legend { "title" }
 			Div {
 				Label(forInputID: "name", content: "name")
-				Input(inputType: .text)
-					.setID("name")
+				Input(inputType: .text, nameAndID: "name")
 					.withPlaceholder("Bob Doe")
 			}
 		}
@@ -367,6 +366,26 @@ struct HTMLTagTests {
 		try simpleContainer(tagName: "footer", Footer.self)
 	}
 
+	@Test func form() async throws {
+		let tag = Form(method: .post, action: "/api/v1/create", encodeType: .multipartFormData) {
+			Label(forInputID: "firstname", content: "First Name: ")
+			Input(inputType: .text, nameAndID: "firstname")
+			Label(forInputID: "lastname", content: "Last Name: ")
+			Input(inputType: .text, name: "lastname", id: "asdf")
+		}
+
+		let expected = """
+			<form action="/api/v1/create" encType="multipart/form-data" method="post>\
+			<label for="firstname">First Name: </label>\
+			<input name="firstname" id="firstname" type="text">\
+			<label for="lastname">Last Name: </label>\
+			<input name="lastname" id="asdf" type="text">\
+			</form>
+			"""
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func label() async throws {
 		let tagA = Label(forInputID: "firstName", content: "First Name")
 		let tagB = Label(forInputID: "firstName") {
@@ -387,17 +406,17 @@ struct HTMLTagTests {
 
 	@Test func input() async throws {
 		let tag = Form {
-			Input(inputType: .text)
-				.withName("firstname")
-			Input(inputType: .text)
-				.withName("lastname")
-			Input(inputType: .tel)
-				.withName("number")
+			Input(inputType: .text, nameAndID: "firstname")
+			Input(inputType: .text, nameAndID: "lastname")
+			Input(inputType: .tel, nameAndID: "number")
 		}
 
 		let expected = """
-			<form><input name="firstname" type="text"><input name="lastname" type="text">\
-			<input name="number" type="tel"></form>
+			<form>\
+			<input name="firstname" id="firstname" type="text">\
+			<input name="lastname" id="lastname" type="text">\
+			<input name="number" id="number" type="tel">\
+			</form>
 			"""
 		let render = try simpleRender(tag)
 		#expect(expected == render)
