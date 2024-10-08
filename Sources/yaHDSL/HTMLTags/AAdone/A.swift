@@ -51,28 +51,7 @@ public extension A {
 	}
 
 	func withReferrerPolicy(_ policy: ReferrerPolicy) -> Self {
-		setAttribute(named: .referrerpolicy, value: policy.rawValue)
-	}
-
-	struct Relationship: RawRepresentable, Sendable, Hashable {
-		public var rawValue: String
-		public init(rawValue: String) {
-			self.rawValue = rawValue
-		}
-
-		public static let alternate = Relationship(rawValue: "alternate")
-		public static let author = Relationship(rawValue: "author")
-		public static let bookmark = Relationship(rawValue: "bookmark")
-		public static let external = Relationship(rawValue: "external")
-		public static let help = Relationship(rawValue: "help")
-		public static let license = Relationship(rawValue: "license")
-		public static let next = Relationship(rawValue: "next")
-		public static let nofollow = Relationship(rawValue: "nofollow")
-		public static let noreferrer = Relationship(rawValue: "noreferrer")
-		public static let noopener = Relationship(rawValue: "noopener")
-		public static let prev = Relationship(rawValue: "prev")
-		public static let search = Relationship(rawValue: "search")
-		public static let tag = Relationship(rawValue: "tag")
+		setAttribute(named: .referrerpolicy, value: policy)
 	}
 
 	func withRelationship(_ rel: Relationship) -> Self {

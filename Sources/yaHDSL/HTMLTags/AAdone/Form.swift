@@ -52,7 +52,7 @@ public extension Form {
 		setAttribute(named: .name, value: value)
 	}
 
-	func withRel(_ relationship: A.Relationship) -> Self {
+	func withRel(_ relationship: Relationship) -> Self {
 		setAttribute(named: .rel, value: relationship)
 	}
 

@@ -49,7 +49,6 @@ public extension Area {
 		setAttribute(named: .referrerpolicy, value: policy)
 	}
 
-	typealias Relationship = A.Relationship
 	func withRel(_ relationship: Relationship) -> Self {
 		setAttribute(named: .rel, value: relationship)
 	}
