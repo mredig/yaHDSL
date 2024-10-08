@@ -17,11 +17,11 @@ struct HTMLTagTests {
 		let anchor = A {
 			"Mah Link"
 		}
-		.withHref("/foo")
-		.withPing([
-			"www.google.com",
-			"www.bing.com"
-		])
+			.withHref("/foo")
+			.withPing([
+				"www.google.com",
+				"www.bing.com"
+			])
 
 		let expected = "<a href=\"/foo\" ping=\"www.google.com www.bing.com\">Mah Link</a>"
 
@@ -348,9 +348,9 @@ struct HTMLTagTests {
 			.withDisabled(true)
 
 		let expected = """
-			<fieldset disabled><legend>title</legend><div><label for="name">name</label><input id="name" \
-			placeholder="Bob Doe" type="text"></div></fieldset>
-			"""
+   <fieldset disabled><legend>title</legend><div><label for="name">name</label><input id="name" \
+   placeholder="Bob Doe" type="text"></div></fieldset>
+   """
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
@@ -390,6 +390,20 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func figcaption() async throws {
+		try simpleContainer(tagName: "figcaption", Figcaption.self)
+	}
+
+	@Test func figure() async throws {
+		try simpleContainer(tagName: "figure", Figure.self)
+	}
+
+	@Test func footer() async throws {
+		try simpleContainer(tagName: "footer", Footer.self)
+	}
+
+
 }
 
 extension HTMLTagTests {
