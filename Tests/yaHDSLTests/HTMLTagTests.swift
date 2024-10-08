@@ -642,6 +642,18 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func output() async throws {
+		let tag = Output {
+			"325"
+		}
+			.withFor(["addend1", "addend2"])
+			.withName("total")
+
+		let expected = "<output for=\"addend1 addend2\" name=\"total\">325</output>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
