@@ -41,6 +41,7 @@ public extension AttributeName {
 	static let coords = AttributeName(rawValue: "coords")!
 	static let crossorigin = AttributeName(rawValue: "crossorigin")!
 	static let csp = AttributeName(rawValue: "csp")!
+	static let data = AttributeName(rawValue: "data")!
 	static let datetime = AttributeName(rawValue: "datetime")!
 	static let decoding = AttributeName(rawValue: "decoding")!
 	static let dirname = AttributeName(rawValue: "dirname")!
@@ -90,6 +91,7 @@ public extension AttributeName {
 	static let referrerpolicy = AttributeName(rawValue: "referrerpolicy")!
 	static let rel = AttributeName(rawValue: "rel")!
 	static let required = AttributeName(rawValue: "required")!
+	static let reversed = AttributeName(rawValue: "reversed")!
 	static let sandbox = AttributeName(rawValue: "sandbox")!
 	static let selected = AttributeName(rawValue: "selected")!
 	static let shape = AttributeName(rawValue: "shape")!
@@ -99,6 +101,7 @@ public extension AttributeName {
 	static let src = AttributeName(rawValue: "src")!
 	static let srcdoc = AttributeName(rawValue: "srcdoc")!
 	static let srcset = AttributeName(rawValue: "srcset")!
+	static let start = AttributeName(rawValue: "start")!
 	static let step = AttributeName(rawValue: "step")!
 	static let target = AttributeName(rawValue: "target")!
 	static let type = AttributeName(rawValue: "type")!

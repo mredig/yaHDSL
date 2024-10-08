@@ -596,6 +596,52 @@ struct HTMLTagTests {
 		#expect(expected == render)
 	}
 
+	@Test func nav() async throws {
+		try simpleContainer(tagName: "nav", Nav.self)
+	}
+
+	@Test func noscript() async throws {
+		try simpleContainer(tagName: "noscript", NoScript.self)
+	}
+
+	@Test func object() async throws {
+		let tag = Object()
+			.withData("/foo/bar.jpg")
+			.withType("image/jpeg")
+
+		let expected = "<object data=\"/foo/bar.jpg\" type=\"image/jpeg\"></object>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func ol() async throws {
+		let tag = Ol {
+			Li { "foo" }
+			Li { "bar" }
+			Li { "baz" }
+		}
+			.withType(.lowercaseRomanNumerals)
+			.withStart(3)
+
+
+		let expected = "<ol start=\"3\" type=\"i\"><li>foo</li><li>bar</li><li>baz</li></ol>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func optgroupAndOption() async throws {
+		let tag = OptGroup {
+			Option { "foo" }
+			Option { "bar" }
+		}
+			.withLabel("placeholders")
+
+
+		let expected = "<optgroup label=\"placeholders\"><option>foo</option><option>bar</option></optgroup>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 
