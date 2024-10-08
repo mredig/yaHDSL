@@ -662,6 +662,34 @@ struct HTMLTagTests {
 		try simpleContainer(tagName: "picture", Picture.self)
 	}
 
+	@Test func pre() async throws {
+		try simpleContainer(tagName: "pre", Pre.self)
+	}
+
+	@Test func Progress() async throws {
+		let tag = yaHDSL.Progress {
+			"update"
+		}
+			.withMax(123)
+			.withValue(66)
+
+		let expected = "<progress max=\"123.0\" value=\"66.0\">update</progress>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func q() async throws {
+		let tag = P {
+			"foo"
+			Q { "did" }.withCitation("/baz")
+			"bar"
+		}
+
+		let expected = "<p>foo<q cite=\"/baz\">did</q>bar</p>"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func title() async throws {
 		let tag = Title("Great Scott")
 

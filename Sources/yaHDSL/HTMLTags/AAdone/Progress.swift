@@ -7,3 +7,13 @@ public struct Progress: HTMLContentElement, GlobalAttributable, EventAttributabl
 		self.childNodes = childNodes
 	}
 }
+
+public extension Progress {
+	func withMax(_ value: Double) -> Self {
+		setAttribute(named: .max, value: value)
+	}
+
+	func withValue(_ value: Double) -> Self {
+		setAttribute(named: .value, value: value)
+	}
+}
