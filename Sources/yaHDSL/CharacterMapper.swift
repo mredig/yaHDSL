@@ -53,7 +53,8 @@ public extension CharacterMapper {
 		var start = CharacterSet.alphanumerics
 		start.formUnion(.punctuationCharacters)
 		start.formUnion(.whitespaces)
-		start.remove(charactersIn: "\"'<>&;")
+		start.remove(charactersIn: "\"'<>&")
+		start.insert(charactersIn: "=+-_$()#@!")
 		return start
 	}()
 
