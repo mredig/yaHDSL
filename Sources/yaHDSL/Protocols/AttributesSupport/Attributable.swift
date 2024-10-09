@@ -76,5 +76,13 @@ public extension Attributable {
 		}
 		return final
 	}
+
+	func customizingOptions(_ block: (inout AttributesOptions?) throws -> Void) rethrows -> Self {
+		var options: AttributesOptions? = attributesOptions ?? Self.defaultAttributesOptions
+		try block(&options)
+		var new = self
+		new.attributesOptions = options
+		return new
+	}
 }
 
