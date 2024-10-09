@@ -61,7 +61,8 @@ public extension Attributable {
 		let accumulator: [String] = attributes.reduce(into: []) { accum, element in
 			let name = element.key.rawValue
 			let value = element.value
-			accum.append(value.renderAttribute(named: name, preferNamedCharacterReferences: options.preferNamedCharacterReferences))
+			guard let attribute = value.renderAttribute(named: name, options: options) else { return }
+			accum.append(attribute)
 		}
 		let accumulated = {
 			if options.sortAttributes {

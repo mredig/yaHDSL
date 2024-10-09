@@ -10,21 +10,27 @@ public enum AttributeValue: Sendable {
 	case bool(Bool)
 	case flag
 
-	func renderAttribute(named name: String, preferNamedCharacterReferences: Bool) -> String {
+	func renderAttribute(named name: String, options: AttributesOptions) -> String? {
+		let renderedValue: String
 		switch self {
 		case .string(let string):
-			"\(name)=\"\(Self.sanitizeValueString(string, preferNamedCharacterReferences: preferNamedCharacterReferences))\""
+			renderedValue = Self.sanitizeValueString(string, preferNamedCharacterReferences: options.preferNamedCharacterReferences)
 		case .list(let array):
-			"\(name)=\"\(Self.sanitizeValueString(array.joined(separator: " "), preferNamedCharacterReferences: preferNamedCharacterReferences))\""
+			renderedValue = Self.sanitizeValueString(array.joined(separator: " "), preferNamedCharacterReferences: options.preferNamedCharacterReferences)
 		case .int(let int):
-			"\(name)=\"\(int)\""
+			renderedValue = "\(int)"
 		case .float(let double):
-			"\(name)=\"\(double)\""
+			renderedValue = "\(double)"
 		case .bool(let bool):
-			"\(name)=\"\(bool)\""
+			renderedValue = "\(bool)"
 		case .flag:
-			"\(name)"
+			return "\(name)"
 		}
+
+		guard renderedValue.isEmpty == false || options.nullifyEmptyAttributes == false else {
+			return nil
+		}
+		return "\(name)=\"\(renderedValue)\""
 	}
 
 	private static func sanitizeValueString(_ string: String, preferNamedCharacterReferences: Bool) -> String {
