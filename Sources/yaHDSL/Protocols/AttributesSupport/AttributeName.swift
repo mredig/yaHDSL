@@ -23,6 +23,7 @@ public struct AttributeName: RawRepresentable, Sendable, Hashable {
 
 public extension AttributeName {
 	static let `as` = AttributeName(rawValue: "as")!
+	static let `default` = AttributeName(rawValue: "default")!
 	static let `defer` = AttributeName(rawValue: "defer")!
 	static let `for` = AttributeName(rawValue: "for")!
 	static let abbr = AttributeName(rawValue: "abbr")!
@@ -45,15 +46,17 @@ public extension AttributeName {
 	static let colspan = AttributeName(rawValue: "colspan")!
 	static let content = AttributeName(rawValue: "content")!
 	static let controls = AttributeName(rawValue: "controls")!
+	static let controlslist = AttributeName(rawValue: "controlslist")!
 	static let coords = AttributeName(rawValue: "coords")!
 	static let crossorigin = AttributeName(rawValue: "crossorigin")!
 	static let csp = AttributeName(rawValue: "csp")!
 	static let data = AttributeName(rawValue: "data")!
 	static let datetime = AttributeName(rawValue: "datetime")!
 	static let decoding = AttributeName(rawValue: "decoding")!
-	static let `default` = AttributeName(rawValue: "default")!
 	static let dirname = AttributeName(rawValue: "dirname")!
 	static let disabled = AttributeName(rawValue: "disabled")!
+	static let disablepictureinpicture = AttributeName(rawValue: "disablepictureinpicture")!
+	static let disableremoteplayback = AttributeName(rawValue: "disableremoteplayback")!
 	static let download = AttributeName(rawValue: "download")!
 	static let enctype = AttributeName(rawValue: "enctype")!
 	static let fetchpriority = AttributeName(rawValue: "fetchpriority")!
@@ -96,8 +99,10 @@ public extension AttributeName {
 	static let pattern = AttributeName(rawValue: "pattern")!
 	static let ping = AttributeName(rawValue: "ping")!
 	static let placeholder = AttributeName(rawValue: "placeholder")!
+	static let playsinline = AttributeName(rawValue: "playsinline")!
 	static let popovertarget = AttributeName(rawValue: "popovertarget")!
 	static let popovertargetaction = AttributeName(rawValue: "popovertargetaction")!
+	static let poster = AttributeName(rawValue: "poster")!
 	static let preload = AttributeName(rawValue: "preload")!
 	static let readonly = AttributeName(rawValue: "readonly")!
 	static let referrerpolicy = AttributeName(rawValue: "referrerpolicy")!

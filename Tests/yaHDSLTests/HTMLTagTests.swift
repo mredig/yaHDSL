@@ -957,6 +957,18 @@ struct HTMLTagTests {
 	@Test func `var`() async throws {
 		try simpleContainer(tagName: "var", Var.self)
 	}
+
+	@Test func video() async throws {
+		let tag = Video {
+			Source().withSrc("/video/foo.mov")
+			Track().withKind(.captions).withSrc("/video/foo.vtt")
+		}
+			.withControls(true)
+
+		let expected = #"<video controls><source src="/video/foo.mov"><track kind="captions" src="/video/foo.vtt"></video>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 extension HTMLTagTests {
