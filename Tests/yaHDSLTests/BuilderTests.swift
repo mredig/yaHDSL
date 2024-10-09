@@ -42,6 +42,25 @@ struct BuilderTests: SimpleTestRendering {
 		}
 	}
 
+	@Test("ConditionalNoElse", arguments: [true, false]) func testConditional(_ flag: Bool) throws {
+		let div = Div {
+			if flag {
+				P("Foo")
+			}
+			P("base")
+		}
+
+		let trueExpectation = #"<div><p>Foo</p><p>base</p></div>"#
+		let falseExpectation = #"<div><p>base</p></div>"#
+
+		let render = try simpleRender(div)
+		if flag {
+			#expect(trueExpectation == render)
+		} else {
+			#expect(falseExpectation == render)
+		}
+	}
+
 	@Test func testForLoop() throws {
 		let list = Ul {
 			for i in 0..<3 {
