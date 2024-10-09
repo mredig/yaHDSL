@@ -3,15 +3,15 @@ public protocol HTMLContentElement: HTMLNode, Attributable {
 
 	init(childNodes: [any HTMLNode])
 
-	init(@HTMLContainerNodeBuilder _ builder: () -> Self)
+	init(@HTMLContainerNodeBuilder _ builder: () throws -> Self) rethrows
 	mutating func addChildNode(_ child: any HTMLNode)
 }
 
 extension HTMLContentElement {
 	public var tag: String? { String(describing: Self.self).lowercased() }
 
-	public init(@HTMLContainerNodeBuilder _ builder: () -> Self) {
-		self = builder()
+	public init(@HTMLContainerNodeBuilder _ builder: () throws -> Self) rethrows {
+		self = try builder()
 	}
 
 	public mutating func addChildNode(_ child: any HTMLNode) {
