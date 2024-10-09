@@ -799,6 +799,24 @@ struct HTMLTagTests {
 		try simpleContainer(tagName: "sup", Sup.self)
 	}
 
+	@Test func svg() async throws {
+		let svgCode = """
+			<rect x='0' y='0' width='50%' height='50%' fill='tomato' opacity='0.75' />
+			<rect x='25%' y='25%' width='50%' height='50%' fill='slategrey' opacity='0.75' />
+			<rect x='50%' y='50%' width='50%' height='50%' fill='olive' opacity='0.75' />
+			<rect x='0' y='0' width='100%' height='100%' stroke='cadetblue' stroke-width='0.5%' fill='none' />
+			"""
+
+		let tag = Svg(svgCode)
+			.withPreserveAspectRatio(Svg.AspectRatioMode(xyMode: .xMaxYMax, meetSliceMode: .slice))
+
+		let expected = """
+			<svg preserveaspectratio="xMaxYMax slice">\(svgCode)</svg>
+			"""
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func table() async throws {
 		let tag = Table {
 			Tr {
