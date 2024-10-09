@@ -52,9 +52,8 @@ public extension CharacterMapper {
 	static let attributeValueAllowedCharacters: CharacterSet = {
 		var start = CharacterSet.alphanumerics
 		start.formUnion(.punctuationCharacters)
-		start.formUnion(.symbols)
 		start.formUnion(.whitespaces)
-		start.remove(charactersIn: "\"'<>&")
+		start.remove(charactersIn: "\"'<>&;")
 		return start
 	}()
 

@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "yaHDSL",
 			resources: [
-				.copy("Resources")
+				.process("Resources")
 			]
 		),
 		.testTarget(
