@@ -8,7 +8,7 @@ public struct HTMLContainerNodeBuilder {
 	}
 
 	public static func buildBlock(_ components: Component...) -> Component {
-		components.flatMap { $0 }
+		buildArray(components)
 	}
 
 	public static func buildOptional(_ component: Component?) -> Component {
