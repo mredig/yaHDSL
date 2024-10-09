@@ -658,6 +658,15 @@ struct HTMLTagTests {
 		try simpleContainer(tagName: "p", P.self)
 	}
 
+	@Test func p2() async throws {
+		let tag = P("foo fum")
+			.setStyle("color: red;")
+
+		let expected = #"<p style="color: red;">foo fum</p>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func picture() async throws {
 		try simpleContainer(tagName: "picture", Picture.self)
 	}

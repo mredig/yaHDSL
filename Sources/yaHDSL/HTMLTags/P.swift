@@ -3,6 +3,10 @@ public struct P: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
 
+	public init(_ text: String) {
+		self = Self { text }
+	}
+
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
