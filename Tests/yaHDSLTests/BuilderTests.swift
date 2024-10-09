@@ -42,4 +42,22 @@ struct BuilderTests: SimpleTestRendering {
 		}
 	}
 
+	@Test func testForLoop() throws {
+		let list = Ul {
+			for i in 0..<3 {
+				Li { P("\(i)") }
+			}
+		}
+
+		let expectation = """
+			<ul>\
+			<li><p>0</p></li>\
+			<li><p>1</p></li>\
+			<li><p>2</p></li>\
+			</ul>
+			"""
+		let render = try simpleRender(list)
+
+		#expect(expectation == render)
+	}
 }
