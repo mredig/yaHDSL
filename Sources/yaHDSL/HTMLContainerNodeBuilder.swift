@@ -11,6 +11,14 @@ public struct HTMLContainerNodeBuilder {
 		buildArray(components)
 	}
 
+	public static func buildPartialBlock(accumulated: Component, next: Component) -> Component {
+		accumulated + next
+	}
+
+	public static func buildPartialBlock(first: Component) -> Component {
+		first
+	}
+
 	public static func buildOptional(_ component: Component?) -> Component {
 		component ?? []
 	}
@@ -29,5 +37,9 @@ public struct HTMLContainerNodeBuilder {
 
 	public static func buildFinalResult<ResultNode: HTMLContentElement>(_ component: Component) -> ResultNode {
 		ResultNode(childNodes: component)
+	}
+
+	public static func buildFinalResult(_ component: Component) -> AnyHTMLNodes {
+		AnyHTMLNodes(children: component)
 	}
 }

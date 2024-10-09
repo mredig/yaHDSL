@@ -79,4 +79,28 @@ struct BuilderTests: SimpleTestRendering {
 
 		#expect(expectation == render)
 	}
+
+	@Test("someNode", arguments: [true, false]) func someHTMLNode(flag: Bool) async throws {
+		@HTMLContainerNodeBuilder
+		func test(flag: Bool) -> some HTMLNode {
+			if flag {
+				Div {
+					H1("ahh")
+				}
+			} else {
+				Empty()
+			}
+		}
+		
+		let render = try simpleRender(test(flag: flag))
+		
+		let expectation = {
+			guard flag else {
+				return ""
+			}
+			return #"<div><h1>ahh</h1></div>"#
+		}()
+		
+		#expect(expectation == render)
+	}
 }
