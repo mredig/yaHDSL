@@ -1,10 +1,10 @@
 #if canImport(Foundation)
 import Foundation
 #endif
-#if canImport(Crypto)
-import Crypto
-#elseif canImport(CryptoKit)
+#if canImport(CryptoKit)
 import CryptoKit
+#elseif canImport(Crypto)
+import Crypto
 #endif
 
 public struct Link: HTMLVoidElement, GlobalAttributable, EventAttributable {
