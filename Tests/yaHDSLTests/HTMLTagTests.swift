@@ -666,7 +666,7 @@ struct HTMLTagTests {
 		try simpleContainer(tagName: "pre", Pre.self)
 	}
 
-	@Test func Progress() async throws {
+	@Test func progress() async throws {
 		let tag = yaHDSL.Progress {
 			"update"
 		}
