@@ -169,8 +169,10 @@ struct HTMLTagTests: SimpleTestRendering {
 			.withForm("theForm")
 			.withName("buttoo")
 			.withFormMethod(.post)
+			.addClass("bold")
+			.addClass("bright")
 
-		let expected = "<button form=\"theForm\" formmethod=\"post\" name=\"buttoo\">Press Me</button>"
+		let expected = #"<button class="bold bright" form="theForm" formmethod="post" name="buttoo">Press Me</button>"#
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
@@ -193,8 +195,9 @@ struct HTMLTagTests: SimpleTestRendering {
 		let tag = Caption {
 			"Photo by: barfoo"
 		}
+			.setClass("italic")
 
-		let expected = "<caption>Photo by: barfoo</caption>"
+		let expected = #"<caption class="italic">Photo by: barfoo</caption>"#
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
