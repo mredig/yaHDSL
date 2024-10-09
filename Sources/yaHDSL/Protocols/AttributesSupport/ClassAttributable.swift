@@ -20,15 +20,23 @@ public extension ClassAttributable {
 	}
 
 	func addClass(_ class: ClassValue) -> Self {
-		return addClasses([`class`])
+		addClasses([`class`])
+	}
+
+	func addClass(_ class: String) -> Self {
+		addClass("\(`class`)" as ClassValue)
 	}
 
 	func setClasses(_ newClasses: [ClassValue]) -> Self {
-		return setAttribute(named: .class, value: .list(newClasses.map(\.rawValue)))
+		setAttribute(named: .class, value: .list(newClasses.map(\.rawValue)))
 	}
 
 	func setClass(_ class: ClassValue) -> Self {
-		return setClasses([`class`])
+		setClasses([`class`])
+	}
+
+	func setClass(_ class: String) -> Self {
+		setClass("\(`class`)" as ClassValue)
 	}
 
 	func removeClasses(_ removedClasses: [ClassValue]) -> Self {
@@ -42,6 +50,10 @@ public extension ClassAttributable {
 	}
 
 	func removeClass(_ class: ClassValue) -> Self {
-		return removeClasses([`class`])
+		removeClasses([`class`])
+	}
+
+	func removeClass(_ class: String) -> Self {
+		removeClass("\(`class`)" as ClassValue)
 	}
 }
