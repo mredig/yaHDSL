@@ -8,6 +8,10 @@ public protocol ClassAttributable: Attributable {
 }
 
 public extension ClassAttributable {
+	func addClasses(_ newClasses: ClassValue...) -> Self {
+		addClasses(newClasses)
+	}
+
 	func addClasses(_ newClasses: [ClassValue]) -> Self {
 		var classList: [ClassValue]
 		if let existing = attributes[.class], case .list(let contents) = existing {
