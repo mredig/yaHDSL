@@ -1020,7 +1020,7 @@ extension HTMLTagTests {
 		mode: yaHTMLDocument.Context.Mode = .minify
 	) throws -> String {
 		let context = yaHTMLDocument.Context(mode: mode, userInfo: [:])
-		return try component.render(withContext: context).with {
+		return try component.render(withContext: context).yaNS.with {
 			print($0)
 		}
 	}

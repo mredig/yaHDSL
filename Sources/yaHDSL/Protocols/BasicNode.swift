@@ -5,8 +5,14 @@ public protocol BasicNode: Sendable {
 }
 
 public extension BasicNode {
-	func with(_ block: (_ instance: inout Self) throws -> Void) rethrows -> Self {
-		var new = self
+	var yaNS: YetAnotherNamespace<Self> { yaHDSL.YetAnotherNamespace(node: self) }
+}
+
+public struct YetAnotherNamespace<T: BasicNode> {
+	public let node: T
+
+	public func with(_ block: (_ instance: inout T) throws -> Void) rethrows -> T {
+		var new = node
 		try block(&new)
 		return new
 	}
