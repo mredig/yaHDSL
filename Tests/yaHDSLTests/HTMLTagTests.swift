@@ -969,6 +969,18 @@ struct HTMLTagTests {
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
+
+	@Test func wbr() async throws {
+		let tag = Span {
+			"first"
+			Wbr()
+			"second"
+		}
+
+		let expected = #"<span>first<wbr>second</span>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
 }
 
 extension HTMLTagTests {
