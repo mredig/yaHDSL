@@ -2,8 +2,7 @@ import Testing
 import Foundation
 import yaHDSL
 
-struct HTMLTagTests {
-
+struct HTMLTagTests: SimpleTestRendering {
 	@Test func comment() throws {
 		let comment = Comment(content: "This is a comment.")
 
@@ -1019,18 +1018,5 @@ extension HTMLTagTests {
 		let expected = "<\(tagName)>the content</\(tagName)>"
 		let render = try simpleRender(tag)
 		#expect(expected == render)
-	}
-}
-
-
-extension HTMLTagTests {
-	private func simpleRender<Component: HTMLNode>(
-		_ component: Component,
-		mode: yaHTMLDocument.Context.Mode = .minify
-	) throws -> String {
-		let context = yaHTMLDocument.Context(mode: mode, userInfo: [:])
-		return try component.render(withContext: context).yaNS.with {
-			print($0)
-		}
 	}
 }
