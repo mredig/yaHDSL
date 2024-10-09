@@ -1,47 +1,47 @@
 public protocol ClassAttributable: Attributable {
-	func addClass(_ class: String) -> Self
-	func addClasses(_ classes: [String]) -> Self
-	func setClass(_ class: String) -> Self
-	func setClasses(_ classes: [String]) -> Self
-	func removeClass(_ class: String) -> Self
-	func removeClasses(_ classes: [String]) -> Self
+	func addClass(_ class: ClassValue) -> Self
+	func addClasses(_ classes: [ClassValue]) -> Self
+	func setClass(_ class: ClassValue) -> Self
+	func setClasses(_ classes: [ClassValue]) -> Self
+	func removeClass(_ class: ClassValue) -> Self
+	func removeClasses(_ classes: [ClassValue]) -> Self
 }
 
 public extension ClassAttributable {
-	func addClasses(_ newClasses: [String]) -> Self {
-		var classList: [String]
+	func addClasses(_ newClasses: [ClassValue]) -> Self {
+		var classList: [ClassValue]
 		if let existing = attributes[.class], case .list(let contents) = existing {
-			classList = contents
+			classList = contents.map(ClassValue.init(rawValue:))
 		} else {
 			classList = []
 		}
 		classList.append(contentsOf: newClasses)
-		return setAttribute(named: .class, value: .list(classList))
+		return setAttribute(named: .class, value: .list(classList.map(\.rawValue)))
 	}
 
-	func addClass(_ class: String) -> Self {
+	func addClass(_ class: ClassValue) -> Self {
 		return addClasses([`class`])
 	}
 
-	func setClasses(_ newClasses: [String]) -> Self {
-		return setAttribute(named: .class, value: .list(newClasses))
+	func setClasses(_ newClasses: [ClassValue]) -> Self {
+		return setAttribute(named: .class, value: .list(newClasses.map(\.rawValue)))
 	}
 
-	func setClass(_ class: String) -> Self {
+	func setClass(_ class: ClassValue) -> Self {
 		return setClasses([`class`])
 	}
 
-	func removeClasses(_ removedClasses: [String]) -> Self {
+	func removeClasses(_ removedClasses: [ClassValue]) -> Self {
 		guard
 			let existing = attributes[.class], case .list(var classList) = existing
 		else { return self }
 		for removedClass in removedClasses {
-			classList.removeAll(where: { $0 == removedClass })
+			classList.removeAll(where: { $0 == removedClass.rawValue })
 		}
 		return setAttribute(named: .class, value: .list(classList))
 	}
 
-	func removeClass(_ class: String) -> Self {
+	func removeClass(_ class: ClassValue) -> Self {
 		return removeClasses([`class`])
 	}
 }

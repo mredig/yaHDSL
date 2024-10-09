@@ -8,11 +8,11 @@ struct ClassTests: SimpleTestRendering {
 		let newDiv = Div {
 			Span {
 				let p = P("barfaroni")
-					.addClass("emphasize")
+					.addClass(.emphasize)
 				if keepIt {
 					p
 				} else {
-					p.removeClass("emphasize")
+					p.removeClass(.emphasize)
 				}
 			}
 		}
@@ -56,4 +56,8 @@ struct ClassTests: SimpleTestRendering {
 			#expect(expectationDont == rendered)
 		}
 	}
+}
+
+extension ClassValue {
+	static let emphasize: ClassValue = "emphasize"
 }
