@@ -31,7 +31,7 @@ public struct yaHTMLDocument: Sendable {
 
 	public func render() throws -> String {
 		try """
-		<DOCTYPE html>
+		<!DOCTYPE html>
 		\(html.render(withContext: context))
 		"""
 	}
