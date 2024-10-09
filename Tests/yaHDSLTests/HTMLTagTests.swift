@@ -393,12 +393,12 @@ struct HTMLTagTests {
 
 	@Test func h123456() async throws {
 		let div = Div {
-			H1(text: "one")
-			H2(text: "two")
-			H3(text: "three")
-			H4(text: "four")
-			H5(text: "five")
-			H6(text: "six")
+			H1("one")
+			H2("two")
+			H3("three")
+			H4("four")
+			H5("five")
+			H6("six")
 		}
 
 		let expected = """

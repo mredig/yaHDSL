@@ -3,7 +3,7 @@ public struct H2: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
 
-	public init(text: String) {
+	public init(_ text: String) {
 		self = Self { text }
 	}
 
