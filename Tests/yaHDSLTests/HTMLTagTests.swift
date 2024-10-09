@@ -28,6 +28,24 @@ struct HTMLTagTests: SimpleTestRendering {
 		#expect(expected == render)
 	}
 
+	@Test func a2() async throws {
+		let tag = A(href: "/fool") {
+			Img(src: "/bard.gif", alt: "singer")
+		}
+
+		let expected = #"<a href="/fool"><img alt="singer" src="/bard.gif"></a>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func a3() async throws {
+		let tag = A("bard", href: "/fool")
+
+		let expected = #"<a href="/fool">bard</a>"#
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func abbr() async throws {
 		let tag = Abbr {
 			"FOMO"

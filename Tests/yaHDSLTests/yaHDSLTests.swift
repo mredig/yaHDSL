@@ -1,39 +1,6 @@
 import Testing
 import yaHDSL
 
-@Test func basicHTMLMinPage() async throws {
-	let html = HTML(
-		childNodes: [
-			Head(childNodes: []),
-			Body(childNodes: [
-				Div(childNodes: [
-					"Foo",
-					"Bar",
-				])
-			]),
-		])
-	let doc = yaHTMLDocument(html: html, context: .default)
-
-	print(try doc.render())
-}
-
-@Test func basicHTMLPrettyPage() async throws {
-	let html = HTML(
-		childNodes: [
-			Head(childNodes: []),
-			Body(childNodes: [
-				Div(childNodes: [
-					"Foo",
-					"Bar",
-				])
-			]),
-		])
-	let doc = yaHTMLDocument(html: html, context: .defaultPretty)
-
-	print(try doc.render())
-}
-
-
 @Test func basicHTMLBuilder() async throws {
 	let yes = true
 	let no = false
@@ -79,7 +46,7 @@ import yaHDSL
 	let doc = yaHTMLDocument(html: html, context: .defaultPretty)
 
 	let expectation = """
-		<DOCTYPE html>
+		<!DOCTYPE html>
 		<html>
 			<head>
 				<title>foooooo</title>

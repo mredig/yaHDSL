@@ -7,6 +7,24 @@ public struct A: HTMLContentElement, GlobalAttributable, EventAttributable {
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
 
+	#if canImport(Foundation)
+	public init(_ text: String, href: URL) {
+		self.init(text, href: href.absoluteString)
+	}
+
+	public init(href: URL, @HTMLContainerNodeBuilder _ builder: () -> A) {
+		self.init(href: href.absoluteString, builder)
+	}
+	#endif
+
+	public init(_ text: String, href: String) {
+		self = A { text }.withHref(href)
+	}
+
+	public init(href: String, @HTMLContainerNodeBuilder _ builder: () -> A) {
+		self = builder().withHref(href)
+	}
+
 	public init(childNodes: [any HTMLNode] = []) {
 		self.childNodes = childNodes
 	}
