@@ -21,10 +21,10 @@ public struct yaHTMLDocument: Sendable {
 		}
 	}
 
-	public let html: HTML
+	public let html: any HTMLProtocol
 	public let context: Context
 
-	public init(html: HTML, context: Context) {
+	public init(html: any HTMLProtocol, context: Context) {
 		self.html = html
 		self.context = context
 	}

@@ -1,4 +1,5 @@
-public struct Body: HTMLContentElement, GlobalAttributable, EventAttributable {
+public protocol BodyProtocol: HTMLContentElement, GlobalAttributable, EventAttributable {}
+public struct Body: BodyProtocol {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?

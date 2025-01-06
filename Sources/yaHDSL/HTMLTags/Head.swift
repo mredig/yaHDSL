@@ -1,4 +1,5 @@
-public struct Head: HTMLContentElement, GlobalAttributable {
+public protocol HeadProtocol: HTMLContentElement, GlobalAttributable {}
+public struct Head: HeadProtocol {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
