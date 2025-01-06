@@ -1,5 +1,5 @@
-public protocol HTMLProtocol: HTMLContentElement, GlobalAttributable {}
-public struct HTML: HTMLProtocol {
+public protocol HTMLProtocol: HTMLNode {}
+public struct HTML: HTMLProtocol, HTMLContentElement, GlobalAttributable {
 	public var childNodes: [any HTMLNode]
 	public var attributes: [AttributeName: AttributeValue] = [:]
 	public var attributesOptions: AttributesOptions?
