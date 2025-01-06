@@ -103,4 +103,28 @@ struct BuilderTests: SimpleTestRendering {
 		
 		#expect(expectation == render)
 	}
+
+	@Test func group() async throws {
+		let foo = Body {
+			Group {
+				A("bloop", href: "/blarp")
+
+				P("foop")
+
+				Br()
+			}
+		}
+
+		let rendered = try foo.render(withContext: .default)
+
+		let expectation = """
+			<body>\
+			<a href="/blarp">bloop</a>\
+			<p>foop</p>\
+			<br>\
+			</body>
+			"""
+
+		#expect(rendered == expectation)
+	}
 }
