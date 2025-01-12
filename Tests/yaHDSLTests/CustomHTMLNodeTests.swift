@@ -3,12 +3,10 @@ import yaHDSL
 
 struct MyDiv<Content: HTMLNode>: CustomHTMLNode {
 
-	var customizations: [@Sendable (Div) -> Div] = []
-
 	@HTMLContainerNodeBuilder
 	let content: @Sendable () -> Content
 
-	var node: Div {
+	var node: some HTMLNode {
 		Div {
 			content()
 			P("foo")
@@ -42,25 +40,5 @@ struct CustomHTMLNodeTests {
 		}
 
 		#expect(test.tag == "div")
-	}
-
-	@Test func customize() async throws {
-		let test = MyDiv {
-			A("bloop", href: "/blarp")
-		}
-			.customize {
-				$0.addClass("ook")
-			}
-
-		let out = try test.render(withContext: .default)
-
-		let expectation = """
-			<div class="bling ook" id="bar">\
-			<a href="/blarp">bloop</a>\
-			<p>foo</p>\
-			</div>
-			"""
-
-		#expect(out == expectation)
 	}
 }
