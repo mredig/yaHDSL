@@ -356,6 +356,10 @@ public extension Input {
 		setAttribute(named: .step, value: value)
 	}
 
+	func withStep(_ value: String) -> Self {
+		setAttribute(named: .step, value: value)
+	}
+
 	func withType(_ type: InputType) -> Self {
 		setAttribute(named: .type, value: type)
 	}
