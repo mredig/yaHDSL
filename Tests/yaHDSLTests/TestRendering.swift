@@ -7,8 +7,8 @@ extension SimpleTestRendering {
 		mode: yaHTMLDocument.Context.Mode = .minify
 	) throws -> String {
 		let context = yaHTMLDocument.Context(mode: mode, userInfo: [:])
-		return try component.render(withContext: context).yaNS.with {
-			print($0)
-		}
+		let output = try component.render(withContext: context)
+		print(output)
+		return output
 	}
 }
