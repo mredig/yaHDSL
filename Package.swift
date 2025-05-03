@@ -31,7 +31,7 @@ let package = Package(
 		),
 		.testTarget(
             name: "yaHDSLTests",
-            dependencies: ["yaHDSL"]
+            dependencies: ["yaHDSL", "yaHDSL-Utilities"]
         ),
     ]
 )
