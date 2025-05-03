@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "yaHDSL",
             targets: ["yaHDSL"]),
+		.library(
+			name: "yaHDSL-Utilities",
+			targets: ["yaHDSL-Utilities"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -18,6 +21,12 @@ let package = Package(
             name: "yaHDSL",
 			resources: [
 				.process("Resources")
+			]
+		),
+		.target(
+			name: "yaHDSL-Utilities",
+			dependencies: [
+				"yaHDSL"
 			]
 		),
 		.testTarget(

@@ -1,5 +1,5 @@
 import Foundation
-
+import yaHDSL
 
 public class NavigationController<Context>: @unchecked Sendable {
 	public typealias Condition = @Sendable (Context?) -> Bool
