@@ -355,6 +355,14 @@ struct HTMLTagTests: SimpleTestRendering {
 		#expect(expected == render)
 	}
 
+	@Test func empty() async throws {
+		let tag = Empty()
+
+		let expected = ""
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func fieldset() async throws {
 		let tag = Fieldset {
 			Legend { "title" }
@@ -407,6 +415,17 @@ struct HTMLTagTests: SimpleTestRendering {
 			<input id="asdf" name="lastname" type="text">\
 			</form>
 			"""
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func group() async throws {
+		let tag = Group {
+			P { "foo" }
+			A("bar", href: "/baz")
+		}
+
+		let expected = "<p>foo</p><a href=\"/baz\">bar</a>"
 		let render = try simpleRender(tag)
 		#expect(expected == render)
 	}
