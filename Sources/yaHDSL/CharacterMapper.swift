@@ -81,4 +81,16 @@ public extension CharacterMapper {
 		return set
 	}()
 }
+
+extension String {
+	public var htmlSafe: String {
+		return self
+			.reduce(into: "") {
+				guard $1.unicodeScalars.allSatisfy(CharacterMapper.attributeValueAllowedCharacters.contains) else {
+					return $0.append(CharacterMapper.preferName(for: $1))
+				}
+				$0.append($1)
+			}
+	}
+}
 #endif
