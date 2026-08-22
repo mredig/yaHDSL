@@ -43,7 +43,7 @@ public enum CharacterMapper {
 	public static func getCode(for character: Character) -> String {
 		let ints = character.unicodeScalars.map(\.value)
 		return ints
-			.map { "&x\(String(format: "%05X", $0));" }
+			.map { "&#x\(String(format: "%05X", $0));" }
 			.joined()
 	}
 }
