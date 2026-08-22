@@ -14,7 +14,7 @@ struct CharMapTests: SimpleTestRendering {
 				$0.append($1)
 			}
 
-		let expectation = #"Does character mapping work? &AMP;/Or doesn&apos;t it?! &x1F9D0;"#
+		let expectation = #"Does character mapping work? &AMP;/Or doesn&apos;t it?! &#x1F9D0;"#
 		#expect(expectation == htmlSafe)
 	}
 
