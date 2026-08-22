@@ -127,4 +127,19 @@ struct BuilderTests: SimpleTestRendering {
 
 		#expect(rendered == expectation)
 	}
+
+	@Test func stringSpacing() async throws {
+		let body = Body {
+			"foo "
+			"bar"
+			" baz"
+			"bong"
+		}
+
+		let rendered = try body.render(withContext: .default)
+
+		let expectation = "<body>foo bar baz bong</body>"
+
+		#expect(rendered == expectation)
+	}
 }

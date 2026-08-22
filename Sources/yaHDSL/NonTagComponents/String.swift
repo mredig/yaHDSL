@@ -5,7 +5,7 @@ extension String: HTMLNode {
 		guard let nextNode = context.nextSibling else {
 			return self
 		}
-		if nextNode is String {
+		if let nextNode = nextNode as? String, self.last != " ", nextNode.first != " " {
 			return self + " "
 		} else {
 			if context.mode == .minify {
