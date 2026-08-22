@@ -517,6 +517,22 @@ struct HTMLTagTests: SimpleTestRendering {
 		#expect(expected == render)
 	}
 
+	@Test func imgNoAlt() async throws {
+		let tag = Img(src: "/foo/bar", alt: "")
+
+		let expected = "<img alt=\"\" src=\"/foo/bar\">"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
+	@Test func imgNoSrc() async throws {
+		let tag = Img(src: "", alt: "fubar")
+
+		let expected = "<img alt=\"fubar\" src=\"\">"
+		let render = try simpleRender(tag)
+		#expect(expected == render)
+	}
+
 	@Test func input() async throws {
 		let tag = Form {
 			Input(inputType: .text, nameAndID: "firstname")

@@ -34,7 +34,7 @@ public struct Img: HTMLVoidElement, GlobalAttributable, EventAttributable {
 
 public extension Img {
 	func withAlt(_ altDescription: String) -> Self {
-		setAttribute(named: .alt, value: altDescription)
+		setAttribute(named: .alt, value: .string(altDescription, requireOutput: true))
 	}
 
 	struct CrossOriginPolicy: RawRepresentable, Sendable, Hashable {
@@ -106,7 +106,7 @@ public extension Img {
 	}
 
 	func withSrc(_ url: String) -> Self {
-		setAttribute(named: .src, value: url)
+		setAttribute(named: .src, value: .string(url, requireOutput: true))
 	}
 
 	#if canImport(Foundation)

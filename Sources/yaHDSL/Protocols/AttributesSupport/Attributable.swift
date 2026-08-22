@@ -51,7 +51,7 @@ public extension Attributable {
 
 	func setAttributeFlag(named name: AttributeName) -> Self {
 		var new = self
-		new.attributes[name] = .flag
+		new.attributes[name] = .flag()
 		return new
 	}
 

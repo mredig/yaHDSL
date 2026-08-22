@@ -14,7 +14,7 @@ public extension ClassAttributable {
 
 	func addClasses(_ newClasses: [ClassValue]) -> Self {
 		var classList: [ClassValue]
-		if let existing = attributes[.class], case .list(let contents) = existing {
+		if let existing = attributes[.class], case .list(let contents) = existing.payload {
 			classList = contents.map(ClassValue.init(rawValue:))
 		} else {
 			classList = []
@@ -45,7 +45,7 @@ public extension ClassAttributable {
 
 	func removeClasses(_ removedClasses: [ClassValue]) -> Self {
 		guard
-			let existing = attributes[.class], case .list(var classList) = existing
+			let existing = attributes[.class], case .list(var classList) = existing.payload
 		else { return self }
 		for removedClass in removedClasses {
 			classList.removeAll(where: { $0 == removedClass.rawValue })
